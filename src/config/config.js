@@ -10,6 +10,6 @@ export const EventId = "WqRnyqjPvx4ot7ins";
 export const AppTItle = "K & A WEDDING";
 export const eventTitle = "K & A WEDDING";
 export const AppShortName = "K & A WEDDING";
-export const AppURL = "";
+export const AppURL = "https://kriti-avi.thekeywedding.in";
 export const isMobile = window.innerWidth <= 500;
 
