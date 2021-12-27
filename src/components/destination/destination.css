@@ -1,0 +1,208 @@
+/* .destinationBtn .btn{
+    padding: 4px 20px !important;
+    font-size: 18px !important;
+    border-radius: none !important;
+    margin-right: 15px!important;
+    background: none ;
+    border: 1px solid white;
+    color: white ;
+} */
+.destinationCls {
+  text-align: center;
+  margin: 0 auto;
+}
+.destinationDetails {
+  display: inline-table;
+  margin-right: 20px;
+  max-width: 300px;
+  text-align: left;
+  vertical-align: top;
+  border: 0px !important;
+}
+.flexHeight {
+  display: flow-root;
+  height: 100%;
+}
+.figcaptionSecondPadding {
+  padding: 0px 15px !important;
+}
+.figcaptionSecondPadding1 {
+  padding: 0px 15px 15px 15px !important;
+}
+.fa-arrows-h {
+  padding: 0px 10px;
+  font-size: 15px;
+}
+.fa-long-arrow-right {
+  display: flex;
+}
+.fa-long-arrow-right:before {
+  padding-top: 5px !important;
+}
+.currencyp {
+  margin-left: 10px !important;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+.destinationDetails1 {
+  display: flex;
+  /*margin-right: 20px;*/
+  /*width: 100% !important;*/
+  text-align: center;
+  vertical-align: top;
+}
+.destinationMobile {
+  width: 100%;
+  /* padding-top: 60px; */
+}
+.destinationBtn {
+  text-align: center;
+}
+/* .destinationBtn .btn-responsive{
+    z-index: -99;
+} */
+/* .destinationBtn .btn
+{
+    width: auto !important;
+    padding: 0px 40px !important;
+    height:40px;
+    font-size: 18px;
+} */
+
+.placesToVisitHeading {
+  margin-bottom: 40px;
+  font-size: 18px;
+  text-align: center;
+}
+.destinationImage .figure-capxion {
+  font-size: 80%;
+  padding: 15px 15px;
+}
+
+.visitTiPlaceHeading {
+  visibility: hidden;
+  margin: 0px;
+}
+.destinationImage img {
+  width: 100% !important;
+  /* height: 200px !important; */
+}
+.figure-capxion span {
+  text-transform: uppercase;
+  font-size: 21px !important;
+  margin-bottom: 2rem;
+}
+figcaption p {
+  /* color: #ffffff;*/
+  margin-bottom: 0px;
+}
+/* .active{
+    background-color:#fff !important; ;
+    color: var(--selected-color) !important;
+    border:2px solid var(--selected-color) !important;
+} */
+.placesToVisitBtn {
+  position: relative;
+  bottom: 0px;
+  margin-top: 40px;
+}
+.destination-data {
+  /* height: 200px; */
+  overflow-y: visible;
+}
+.destination-data-mobile {
+  height: calc(100% - 186px);
+  position: relative;
+}
+.destination-data-mobile .figure-caption .destinationBtn {
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+}
+.destination-data-mobile .figure-caption .destinationBtn button {
+  margin: 0px auto !important;
+}
+@media screen and (max-width: 768px) {
+  /* .destinationBtn .btn{
+        padding: 4px 20px !important;
+        font-size: 8px !important;
+    } */
+  .destinationDetails {
+    display: inline-block;
+    margin-right: 0 !important;
+    max-width: 300px !important;
+    text-align: left;
+    vertical-align: top;
+  }
+  .destinationBtn {
+    text-align: center;
+  }
+  /* .destinationBtn .btn{
+        padding: 0px 5px !important;
+        font-size: 10px !important;
+       
+    } */
+  .mobilefig {
+    text-align: left !important;
+  }
+  .figure {
+    margin-top: 0px !important;
+    width: 100% !important;
+  }
+  .figure .bridgeImage {
+    width: 100% !important;
+  }
+  .destinationImage img {
+    width: 100% !important;
+    /* height: 186px !important; */
+  }
+  .eventDetDiv {
+    padding-right: 0 !important;
+  }
+  .placesToVisitHeading {
+    font-size: 16px;
+    max-width: 180px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 100px auto 50px auto;
+    border: solid 1px;
+  }
+  .visitTiPlaceHeading {
+    visibility: visible;
+    margin: 10px auto;
+    position: relative;
+    top: 15px;
+    left: 33.55%;
+    z-index: 99999;
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 767px) {
+}
+.figure-caption {
+  padding: 10px 15px;
+}
+
+.destinationMobile .scrollMobile {
+  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+}
+
+.destinationMobile .scrollMobile.itinery {
+  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+.ptvFix {
+  padding-bottom: 20px;
+}
+.ptvFixDestination {
+  padding-bottom: 40px;
+}

@@ -1,0 +1,32 @@
+/* Menu Screen */
+.main-screen{
+  position: relative;
+  text-align: center;
+}
+.event-name{
+  font-size: 18px;
+  margin: 20px 0 30px 0;
+  text-align: center;
+}
+.menu-container{
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.iconName{
+  width: 100%;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 768px){
+  
+}
+
+@media (max-width: 350px){
+  .iconName{
+    font-size: 8px;
+  } 
+}

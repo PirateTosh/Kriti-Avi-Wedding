@@ -1,0 +1,139 @@
+.invitationBox {
+  margin-bottom: 30px;
+}
+.invitationMessage {
+  padding: 15px;
+}
+
+.dashboardImage {
+  width: 500px;
+  height: 293px;
+  padding-top: 60px;
+}
+.fa-youtube-play {
+  font-size: 59px;
+  color: red;
+  position: relative;
+  top: 186px;
+  cursor: pointer;
+}
+.youTubeIcon {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+.message {
+  font-size: 16px;
+  line-height: 1.2em;
+  text-align: justify;
+}
+.nextPinkButton {
+  border: 1px solid #ffffff;
+  width: 25% !important;
+  background-color: #ffffff;
+  display: flex !important;
+  justify-content: center;
+}
+.nextPinkButton:hover {
+  border: 1px solid var(--selected-color) !important;
+  width: 25% !important;
+  background-color: #ffffff !important;
+  color: var(--selected-color) !important;
+}
+.playButton {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  height: 35px;
+  position: absolute;
+  width: 35px;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.playButton:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 4px 11px 25px;
+  border-color: transparent transparent transparent #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: -10px;
+  bottom: 0;
+  margin: auto;
+}
+.modal-content {
+  background: transparent !important;
+  border: none;
+}
+iframe {
+  width: 100% !important;
+}
+.Dashboard-Center-welcome {
+  margin-top: 11%;
+}
+.Dashboard-Center {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 500px;
+  margin-top: 13%;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .Dashboard-Center {
+    width: 405px;
+    margin-top: 20% !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .Dashboard-Center {
+    width: 450px;
+    margin-top: 10% !important;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .Dashboard-Center {
+    width: 300px;
+    margin-top: 22% !important;
+  }
+
+  .modal-content {
+    top: 5% !important;
+    left: 5% !important;
+  }
+  iframe {
+    /* width: 300px!important;
+        height: 211px !important; */
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .Dashboard-Center {
+    width: 100%;
+    margin-top: 15% !important;
+  }
+  .Dashboard-Center-welcome {
+    margin-top: 11% !important;
+  }
+  .dashboardImage {
+    width: 100%;
+    height: auto;
+  }
+
+  .fa-youtube-play {
+    top: 127px;
+  }
+  .form-group .btn {
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    font-size: 14px !important;
+  }
+}

@@ -1,0 +1,216 @@
+.mySummary p{
+    margin: 0px ;
+    font-size: 14px;
+    font-weight: 600;
+}
+.hotel-font-weight-bold {
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  color: var(--font-color);
+}
+.hotel-block {
+  margin-bottom: 30px;
+}
+.row1p p{
+
+  margin: 0px ;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+.mySummary{
+  margin-bottom: 15px;
+}
+.mySummary .fa-plane{
+  color: var(--font-color);
+  font-size: 11px;
+  border: 2px solid var(--font-color);
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+    left: 50px;
+    top: 9px;
+}
+.fa-plane-Down{
+  top: 0px !important;
+}
+
+.mySummary1 p{
+  margin: 0px ;
+    font-size: 14px;
+    font-weight: 600;
+}
+.mySummary1 .fa-plane{
+  color: var(--font-color);
+  font-size: 11px;
+  border: 2px solid var(--font-color);
+  border-radius: 50%;
+  padding: 5px;
+  position: relative;
+    top: 9px;
+    
+}
+.itinerary1{
+  margin-right: 30px;
+ 
+}
+.middleBorder{
+  border-left: 1px solid var(--font-color);
+}
+.borderSummary{
+  border-left: 2px dashed var(--font-color);
+    height: 40px;
+    position: relative;
+    left: 59px;
+    top: 9px;
+}
+.borderSummaryRight{
+  border-right: 2px dashed var(--font-color);
+  height: 40px;
+  position: relative;
+  left:-10px;
+  top: 9px;
+}
+.borderSummaryDown{
+  top:0px !important;
+}
+
+.itineraryMiddle p{
+  margin: 0px;
+  font-weight: 100;
+  font-size: 11px;
+  color: var(--font-color);
+}
+.itineraryMiddle{
+  margin-left: 35px;
+ margin-top:5px;
+}
+.itineraryMiddle1{
+  margin-top:0px!important;
+}
+.spanTopContent{
+  position: absolute;
+   left: 98px;
+    font-size: 16px;
+    line-height: 2.2;
+    color: var(--font-color);
+  }
+  .spanDownContent{
+     position: absolute;
+      left: 98px; 
+      color: var(--font-color);
+  }
+  .rightSpan{
+    position: absolute;
+    right: 77px;
+    margin: 0px;
+    padding:0px;;
+  }
+  .HOTEL-BOOKING p{
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0px 20px;
+    padding: 0px;
+    
+
+  }
+
+  .spanSecondContent1 {
+    color: var(--font-color);
+    position: absolute;
+    left: 158px;
+    float: left;
+    text-align: right;
+
+    font-size: 15px;
+}
+.spanSecondContentDate{
+  position: absolute;
+  left:133px;
+  font-size: 12px;
+}
+
+.HOTEL-BOOKING1{
+  margin-top: 30px !important;
+}
+  @media screen and (max-width: 769px){
+
+    .row1p p{
+    text-align: center;
+   margin-top: -2px;
+    
+  }
+  .mySummary1{
+    margin-top: 40px;
+    border-top: 2px solid #fff;
+    margin-left: 30px;
+    margin-right: 30px;
+    float: right;
+  }
+  .row2p{
+    margin-top: 20px;
+  }
+  .middleBorder{
+    border: transparent;
+    float:left;
+    margin-top: 30px;
+    margin-left: 16px;
+  }
+  .mySummary1 .fa-plane {
+    float: left;
+}
+.borderSummaryRight {
+  left: -91px;
+  top: 20px;
+}
+.mobile-text1 p {
+  position: relative;
+  left: -60px;
+  text-align: center;
+}
+.spanTopContent {
+  left: 122px;
+
+}
+.spanDownContent {
+  left: 120px;
+  font-size: 16px;
+}
+.rightSpanMobile{
+  position: absolute !important;
+  top:84px !important;
+}
+.spanSecondContent{
+  color: white;
+  position: absolute;
+  left: 95px;
+  font-size: 15px;
+}
+.HOTEL-BOOKING p{
+  text-align: center !important;
+  font-size: 13px;
+}
+.HOTEL-BOOKING1{
+  margin-top:0px !important;
+  padding-bottom: 10px !important;
+}
+.HOTEL-BOOKING-Mobile{
+  position: absolute !important;
+  top: 100px !important;
+  left: 83px;
+}
+.HOTEL-BOOKING-RoomNumber{
+  padding-top: 40px!important;
+}
+
+  }
+.summaryDiv
+{
+  color: #fff;
+}
+@media screen and (min-width: 768px){
+  .b20 {
+    margin-bottom: 20px;
+  }
+}

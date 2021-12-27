@@ -1,0 +1,35 @@
+.booked-ticket{
+  position: relative;
+  max-width: 500px;
+  color: var(--font-color);
+  margin: 100px auto 0 auto;
+}
+
+.booked-ticket .links {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.booked-ticket .links a {
+  margin: 5px;
+}
+.booked-ticket .page-title {
+  text-align: center;
+  margin: 15px 0;
+  padding-top: 20px;
+}
+
+/* booked tickets */
+.ticket {
+  padding: 10px;
+  margin: 5px;
+}
+
+.ticket .pnr{
+  display: flex;
+  justify-content: space-between;
+}
+
+.ticket .airline, .ticket .airport{
+  margin-bottom: 10px;
+}

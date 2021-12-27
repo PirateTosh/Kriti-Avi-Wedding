@@ -1,0 +1,30 @@
+.notifications{
+  margin: 0px auto 10px auto;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  word-break: break-word
+}
+.notificationTitle{
+  font-size:21px;
+}
+.notificationBody{
+  font-size: 18px;
+}
+.notificationDate{
+  font-size: 14px;
+}
+
+@media screen and (max-width:768px){ 
+  .mobileMargin{
+    margin-top: 100px;
+  }
+  .notificationTitle {
+    font-size:14px;
+  }
+  .notificationBody {
+    font-size: 12px;
+  }
+  .notificationDate {
+    font-size: 10px;
+  }
+}

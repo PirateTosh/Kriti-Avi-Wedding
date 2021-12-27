@@ -1,0 +1,188 @@
+/* .itienararyBtn .btn{
+    padding: 4px 22px !important;
+    font-size: 13px !important;
+    border-radius: none !important;
+    margin-right: 20px!important;
+    background: none ;
+    border: 2px solid white;
+    color: white ;
+} */
+.itienararyBtn{
+  text-align: center;
+}
+.fa-2x{
+  font-size: 1em !important;
+}
+/* .itienararyBtn .btn:hover{
+  border: 2px solid var(--selected-color) !important;
+  color: var(--selected-color) !important;
+  background: white !important;
+} */
+.itenaryParagraph{
+  margin: 0px;
+  color:white;
+  font-size:13px;
+
+}
+.borderSummaryItinerary, .borderSummaryItineraryMobile{
+  border-left: 1px dashed var(--font-color);
+  height: 40px;
+  position: relative;
+}
+.borderSummaryItinerary
+{
+  left: 47.666666%;
+}
+.borderSummaryItineraryMobile
+{
+
+  left: 13%;
+}
+.fa-plane-itinerary{
+  font-size: 24px! important;
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  color: var(--font-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.itineraryp{
+  position: relative;
+  left:-6%;
+}
+.mobileHeadingFontSize{
+padding-top: 5px !important;
+}
+.itineraryp p{
+margin: 0px;
+padding: 0px;
+text-align: left;
+line-height: 1.0;
+padding-bottom: 5px;
+font-size: 14px;
+}
+.itinerarypRight{
+  position: relative;
+}
+.itinerarypRight p{
+  margin: 0px;
+  padding: 0px;
+  /* float: right !important; */
+  text-align: right;
+  line-height: 1.0;
+  font-size: 14px;
+  padding-top: 5px;
+}
+.iconMargin{
+  width: 8%;
+  display: inline-block;
+  left: 1px;
+  margin-right: 5px;
+  position: relative;
+  top: 10px;
+}
+
+/* .active{
+  background-color:white !important; ;
+  color: var(--selected-color) !important;
+  border:2px solid var(--selected-color) !important;
+} */
+.itineraryscreen
+{
+  background: linear-gradient(to right, var(--selected-color), #ff6a00) !important;
+}
+.iconMarginLast{
+  padding-top:1.7%;
+  padding-bottom:1.9%;
+  top: 10px;
+  left: 10px;
+}
+.itenaryContent{
+  width: 84%;
+  display: inline-block;
+}
+.itenaryContent p{
+  text-align: left;
+}
+.hrline{
+  border-bottom: 1px solid white;
+}
+@media screen and (max-width: 995px){
+  .iconMargin{
+      padding-top:1.677%;
+      padding-bottom:1%;
+      position: relative;
+      top: 10px;
+      left: 0px;
+  }
+  @media screen and (max-width: 1150px){
+      .iconMargin{
+          left:1px;
+      }
+  }
+  .iconMarginLast{
+      top: 10px;
+      left: 0px;
+  }
+ /*  .itienararyBtn .btn{
+      padding: 4px 7px !important;
+      font-size: 8px !important;
+      margin-right: 10px !important;
+  } */
+}
+.marginLast{
+  margin-bottom: 10px;
+}
+
+.margin0auto {
+  margin: 0 auto;
+}
+.itienararyCls
+{
+  text-align: center;
+  margin:0 auto;
+}
+.itineraryBody
+{
+  display: inline-block;
+  vertical-align: top;
+  width: 600px !important;
+}
+.iconDiv
+{
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+}
+.iconDiv i
+{
+  width: 45px;
+  height: 45px;
+}
+.itinerarymobile
+{
+  width:80% !important;
+  left:-10px;
+}
+.itineraryMobileIcon
+{
+  width: 20% !important;
+}
+
+@media screen and (max-width: 768px){
+.borderSummaryItineraryMobile {
+  left: 10%;
+}
+}
+.destinationMobile{
+  overflow-x: scroll;
+}
+.destinationMobile .scrollMobile {
+  overflow-x: scroll;
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto;
+}
+

@@ -1,0 +1,456 @@
+.headingTop {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 36px;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.9);
+}
+.myPreference {
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+}
+.myPreferenceBtn1 {
+  border: 1px solid #e2d8d8;
+  border-radius: 2px;
+  width: auto;
+  height: 35px;
+  font-size: 16px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-left: 13px;
+  margin-right: 13px;
+  text-align: center;
+  line-height: 34px;
+}
+.myPreferenceBtn1:hover {
+  background: #fff;
+  color: var(--selected-color);
+}
+.accordion .card-header:after {
+  font-family: "FontAwesome";
+  content: "\f106";
+  float: right;
+}
+
+.card-header-customized {
+  color: var(--font-color);
+  border-bottom: transparent;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+.myPreference-card {
+  background: transparent;
+  border: transparent;
+}
+.myPreference-card-body {
+  position: relative !important;
+  top: -17px !important;
+}
+.card-header-customized .fa-wheelchair {
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.faCommon {
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+.card-header-customized .fa-check {
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 20px;
+}
+.collapseBodyParagraphp {
+  text-align: center;
+}
+.collapseBodyParagraphp p {
+  margin-bottom: 5px !important;
+}
+
+input[type="radio"] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+.specialAssistancesDisplay label {
+  width: auto !important;
+  cursor: pointer;
+}
+.specialAssistancesDisplay {
+  display: inline-flex;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  visibility: hidden;
+  display: none;
+}
+
+.myPreference-card .mypreference-radio-group label {
+  width: 174px;
+  border: 1px solid var(--font-color);
+  text-align: center;
+  height: 40px;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+input[type="radio"] + label {
+  color: var(--font-color);
+  background: transparent;
+  border-color: var(--font-color);
+}
+
+input[type="radio"]:checked + label {
+  color: var(--selected-color) !important;
+  background: #fff;
+  border-color: var(--selected-color);
+}
+
+.myPreferenceTextArea .textarea {
+  resize: none !important;
+  background-color: transparent;
+  border-radius: 2px;
+  font-size: 14px !important;
+  width: 96%; /* 332px; */
+  height: 161px;
+  border: 1px solid var(--font-color);
+  color: var(--font-color);
+}
+.textarea:focus,
+input:focus,
+.form-control:focus {
+  outline: none !important;
+}
+.myPreferenceTextArea ::placeholder {
+  color: var(--font-color) !important;
+}
+/* .btn{
+    border:1px solid #fff;
+    padding: 0px 14px !important;
+    width:auto!important;
+    text-transform:none!important;
+    font-weight: normal!important;
+    height:40px!important;
+    margin-right: 9px !important;
+    line-height: 33px!important;
+    border-radius: 0%;
+
+} */
+/* .active {
+    background-color: white !important;
+    color: var(--selected-color) !important;
+    border: 1px solid var(--selected-color) !important;
+} */
+.updateBtn {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.updateBtn button {
+  background-color: transparent;
+  height: 40px;
+  width: auto;
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  border-radius: 2px;
+  padding: 0px 40px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 10px;
+}
+.updateBtn button:hover {
+  color: var(--selected-color) !important;
+  background: #fff;
+  border-color: var(--selected-color);
+  border-radius: 2px;
+}
+.myPreferenceSelection {
+  display: inline-flex;
+}
+.myPreferenceSelection select {
+  text-align: center;
+  margin: 0px 13px;
+}
+.myPreferenceTextArea1 {
+  text-align: center;
+  margin-top: 10px;
+}
+.myPreferenceTextArea1 textarea {
+  width: 80% !important;
+  height: 107px !important;
+}
+.special-Radio form {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.special-Radio form label {
+  border: 1px solid var(--font-color);
+  padding: 6px 31px !important;
+  margin: 0px 10px !important;
+}
+.special-Radio-Additional form label,
+.special-Radio-Additional form label:hover {
+  width: 190px !important;
+  padding: 7px 0px !important;
+  text-align: center;
+}
+.special-Radio-Additional form input[type="radio"]:checked + label {
+  width: 190px !important;
+}
+.roomSection {
+  text-align: center;
+}
+.roomSection p {
+  margin-top: 10px !important;
+  margin-bottom: 5px !important;
+}
+.serviceBtn {
+  color: var(--font-color);
+  border: 1px solid var(--font-color);
+  margin-right: 10px;
+  padding: 7px 40px;
+}
+
+.selectARoomRadio form {
+  margin-left: auto;
+  margin-right: auto;
+}
+.selectARoomRadio form label {
+  border: 1px solid var(--font-color);
+  padding: 6px 30px !important;
+  color: var(--font-color);
+}
+
+.servicesMypreference .service-slot,
+.servicesMypreference .empty-service-slot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 180px;
+  margin: 0 auto;
+  border: solid 1px;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: var(--font-color);
+}
+.servicesMypreference .empty-service-slot {
+  padding: 0;
+}
+.service-slot p {
+  margin-bottom: 0;
+}
+.empty-service-slot p {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+}
+.servicesMypreference p.service-actions {
+  display: flex;
+}
+.servicesMypreference .service-slot i {
+  font-size: 14px;
+  border: solid 1px;
+  padding: 5px;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.update-info {
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 15px;
+  color: var(--font-color) !important;
+}
+
+.topHint {
+  margin: 0px;
+  padding: 0px;
+  font-size: 14px;
+}
+.servicesMypreference {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.servicesMypreference p.service-name {
+  font-size: 14px;
+  font-weight: 600;
+}
+.servicesMypreference .fa-angle-down {
+  border: 1px solid #fff;
+  border-radius: 50%;
+  padding: 2px;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.optionList {
+  margin-left: 0px !important;
+  padding: 0px !important;
+  text-align: center;
+}
+.optionList li {
+  cursor: pointer;
+  font-size: 16px;
+}
+.optionList li:hover {
+  background-color: #fff;
+}
+@media screen and (max-width: 992px) {
+  .mypreference-radio-group label {
+    margin-bottom: 9px;
+  }
+  .myPreferenceTextArea textarea {
+    width: 249px;
+    height: 107px;
+  }
+  .collapseBodyParagraphp p {
+    margin-left: 49px;
+  }
+
+  .myPreferenceTextArea1 textarea {
+    width: 396px !important;
+  }
+  .special-Radio form label {
+    padding: 6px 9px !important;
+  }
+}
+@media screen and (max-width: 769px) {
+  .mp-top {
+    margin-top: 100px;
+  }
+  .myPreferenceBtn1 {
+    height: 49px;
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 44px;
+  }
+  .selectARoomRadio form {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .collapseBodyParagraphp p {
+    margin-left: 0px !important;
+    font-size: 15px;
+  }
+  .radioresponsive form {
+    float: none !important;
+  }
+  .myPreferenceTextArea textarea,
+  .collapseBodyParagraphp p,
+  .radioresponsive {
+    text-align: center !important;
+  }
+  .myPreferenceTextArea {
+    text-align: center !important;
+    margin-bottom: 20px;
+  }
+  .updateBtn button {
+    padding: 0px 20px;
+    font-size: 14px;
+  }
+  .mypreference-radio-group label {
+    height: 43px !important;
+    line-height: 30px;
+    margin-bottom: 25px !important;
+    width: 152px !important;
+    font-size: 14px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .myPreferenceTextArea1 textarea {
+    width: 250px !important;
+    height: 153px !important;
+  }
+  .special-Radio form label {
+    display: block !important;
+
+    margin-bottom: 14px !important;
+  }
+  .myPreferenceSelection-mobile {
+    display: inline-block !important;
+  }
+  .myPreferenceSelection-mobile select {
+    margin: 15px 1px !important;
+  }
+  .myPreferenceTextArea .textarea {
+    font-size: 12px !important;
+  }
+
+  .updateBtn {
+    margin-top: 0px !important;
+  }
+  .Options form label {
+    display: inline-block !important;
+    width: 140px !important;
+    padding: 7px 13px !important;
+    margin-bottom: 7px !important;
+  }
+  .Options form label,
+  .special-Radio-Additional form label:hover {
+    width: 140px !important;
+    padding: 7px 13px !important;
+    text-align: center;
+  }
+  .Options form input[type="radio"]:checked + label {
+    width: 140px !important;
+  }
+  .topHint {
+    margin-bottom: 20px;
+
+    font-size: 14px;
+  }
+  .topHint1 {
+    position: relative;
+    top: 222px;
+  }
+  .specialAssistancesDisplay {
+    display: block;
+  }
+  .specialAssistancesDisplay label {
+    width: 180px !important;
+  }
+  .serviceBtn {
+    margin-bottom: 10px;
+  }
+
+  .myPreference-card .card-title {
+    position: relative;
+    padding-left: 20px;
+  }
+  .myPreference-card .card-title i {
+    padding-right: 10px;
+    font-size: 20px;
+    top: -3px !important;
+    position: absolute;
+    left: -5px;
+  }
+  .summaryDiv .myPreference-card .card-title {
+    position: relative;
+    padding-left: 25px;
+    color: var(--font-color);
+  }
+}

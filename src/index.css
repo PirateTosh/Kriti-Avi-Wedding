@@ -1,0 +1,134 @@
+@import url("icons.css");
+:root {
+  --selected-color: #8a74b4;
+  --font-color: #ffffff;
+  --bbcolor: #ff7d41;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  /*font-family: sans-serif;*/
+  /*background: url("assets/images/background.jpg");  no-repeat fixed center center */
+  /* background-image: url('http://s3-ap-southeast-1.amazonaws.com/thekeydevtimages/bmtimages/73469191-dbde-4c7e-8c3f-7fd0c8e50416.jpeg');*/
+}
+
+.topHeading {
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 25px;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+.container-fluid {
+  width: 90% !important;
+}
+
+.form-control {
+  border-radius: 0 !important;
+  font-size: 14px !important;
+  height: 35px !important;
+  border: 1px solid var(--font-color) !important;
+  background-color: transparent !important;
+  color: var(--font-color) !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+.d-block {
+  display: block;
+}
+
+.thumb {
+  padding: 5px 9px;
+  border: 1px solid;
+  border-radius: 100%;
+  margin-right: 10px;
+  font-size: 12px;
+  height: 27px;
+}
+
+/* .btn{
+  text-align: center !important;
+  border-radius: 0 !important;
+  text-transform: uppercase;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
+  background: transparent !important;
+  color: #ffffff !important;
+  font-size: 18px !important;
+  margin: 0 auto !important;
+} */
+input:focus {
+  outline-color: orangered !important;
+}
+@font-face {
+  font-family: "Conv_bmt-icons";
+  src: url("assets/fonts/bmt-icons.eot");
+  src: local("☺"), url("assets/fonts/bmt-icons.woff") format("woff"),
+    url("assets/fonts/bmt-icons.ttf") format("truetype"),
+    url("assets/fonts/bmt-icons.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Arima Madurai Black";
+  src: url("assets/appfonts/ArimaMadurai-Black.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Regular";
+  src: url("assets/appfonts/Nunito-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Vollkorn Italic";
+  src: url("assets/appfonts/Vollkorn-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+@font-face {
+  font-family: "Arima Madurai Medium";
+  src: url("assets/appfonts/ArimaMadurai-Medium.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Ovo Regular";
+  src: url("assets/appfonts/Ovo-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yrsa Light";
+  src: url("assets/appfonts/Yrsa-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Great Vibes Regular";
+  src: url("assets/appfonts/GreatVibes-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Satisfy Regular";
+  src: url("assets/appfonts/Satisfy-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Nunito Bold";
+  src: url("assets/appfonts/Nunito-Bold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Scope One Regular";
+  src: url("assets/appfonts/ScopeOne-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,224 @@
+.textAreaAlign {
+  margin-left: auto;
+
+  margin-right: auto;
+}
+.ratingp1 {
+  margin-top: 30px;
+  font-size: 18px !important;
+  text-align: center;
+}
+.textAreaAlign textarea {
+  margin-left: auto;
+
+  margin-right: auto;
+
+  resize: none !important;
+
+  background: transparent;
+}
+
+.textAreaAlign ::placeholder {
+  color: var(--font-color) !important;
+
+  font-size: 14px !important;
+
+  font-weight: normal !important;
+  padding-left: 10px !important;
+}
+.para {
+  padding: 50px 0 0 0;
+}
+.wishesBtn {
+  text-align: center;
+
+  margin-top: 30px;
+}
+.fa-star {
+  font-size: 25px !important;
+}
+.paddingFeedback {
+  padding-bottom: 10px;
+  font-size: 16px;
+}
+
+.wishesBtn input {
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid var(--font-color);
+  width: auto;
+  height: 40px;
+  padding: 0px 40px;
+  font-size: 18px;
+
+  cursor: pointer;
+}
+
+.wishesBtn input:hover {
+  background: #fff;
+
+  color: var(--selected-color);
+
+  border-color: var(--selected-color);
+}
+
+@media screen and (max-width: 769px) {
+  .wishesHeading {
+    position: absolute;
+
+    top: -50px;
+
+    left: 130px;
+  }
+
+  .textAreaAlign ::placeholder {
+    font-size: 12px !important;
+
+    font-weight: normal !important;
+  }
+  .wishesBtn input {
+    padding: 0px 20px;
+    font-size: 14px;
+  }
+  .textAreaAlign {
+    margin-top: 160px !important;
+  }
+
+  .ratingp {
+    text-align: center;
+  }
+  .dv-star-rating {
+    clear: both;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    display: flex !important;
+    justify-content: center;
+    flex-direction: row-reverse;
+  }
+}
+
+.wishesBtn .ratingSubmit {
+  margin-bottom: 20px;
+}
+.ratingStar span {
+  float: right;
+}
+.ratingStar span {
+  font-size: 25px;
+  color: var(--font-color);
+  cursor: pointer;
+  padding-left: 13px;
+}
+.ratingTextArea {
+  border: 1px solid var(--font-color);
+  background: transparent;
+  resize: none;
+}
+
+.ratingp {
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.ratingStar > span:hover:before {
+  content: "\2605";
+  position: absolute;
+}
+
+.ratingStar {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.ratingStar > span:hover:before,
+.ratingStar > span:hover ~ span:before {
+  content: "\2605";
+  position: absolute;
+}
+.ratingStar > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+}
+
+.rating {
+  float: left;
+}
+
+/* :not(:checked) is a filter, so that browsers that don’t support :checked don’t 
+   follow these rules. Every browser that supports :checked also supports :not(), so
+   it doesn’t make the test unnecessarily selective */
+.rating:not(:checked) > input {
+  position: absolute;
+  top: -9999px;
+  clip: rect(0, 0, 0, 0);
+}
+
+.rating:not(:checked) > label {
+  float: right;
+  width: 1em;
+  padding: 0 0.1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 200%;
+  line-height: 1.2;
+  color: #ddd;
+  text-shadow: 1px 1px #bbb, 2px 2px #666, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.rating:not(:checked) > label:before {
+  content: "★ ";
+}
+
+.rating > input:checked ~ label {
+  color: #f70;
+  text-shadow: 1px 1px #c60, 2px 2px #940, 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+  color: gold;
+  text-shadow: 1px 1px goldenrod, 2px 2px #b57340,
+    0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.rating > input:checked + label:hover,
+.rating > input:checked + label:hover ~ label,
+.rating > input:checked ~ label:hover,
+.rating > input:checked ~ label:hover ~ label,
+.rating > label:hover ~ input:checked ~ label {
+  color: #ea0;
+  text-shadow: 1px 1px goldenrod, 2px 2px #b57340,
+    0.1em 0.1em 0.2em rgba(0, 0, 0, 0.5);
+}
+
+.rating > label:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.widget-svg {
+  width: 20px !important;
+}
+
+.star-ratings {
+  float: right !important;
+}
+
+.dv-star-rating .dv-star-rating-star i {
+  font-size: 20px;
+}
+
+.dv-star-rating {
+  float: right;
+}
+
+.feedbackq5 {
+  display: none;
+}
+.feedback-questions input[type="radio"]:checked + label {
+  background: transparent !important;
+  color: rgb(255, 180, 0) !important;
+}

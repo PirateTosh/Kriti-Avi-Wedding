@@ -1,0 +1,168 @@
+.input_margin {
+  color: var(--font-color);
+  font-size: 12px;
+}
+.Absolute-Center.is-Responsive {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.logo {
+  width: 200px;
+  height: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  background-size: cover;
+}
+.loginbtn {
+  width: auto !important;
+  display: flex !important;
+  justify-content: center;
+  margin-top: 30px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  height: 40px;
+  padding: 0px 40px !important;
+  outline: none !important;
+  cursor: pointer;
+}
+.loginbtn:focus,
+.loginbtn:active,
+.loginbtn:hover {
+  background-color: #fff !important;
+  color: var(--selected-color) !important;
+  border: 1px solid var(--selected-color) !important;
+}
+
+.loginImage {
+  margin: auto;
+  /* margin-bottom: 10px; */
+  background-image: url("../../assets/images/loginIcom.jpg");
+}
+.textboxTransparent {
+  background: transparent !important;
+  border: 1px solid var(--font-color) !important;
+  text-align: center;
+}
+.textboxTransparent.loginText {
+  width: 500px !important;
+  height: 40px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  font-size: 22px;
+  text-transform: lowercase;
+}
+.textboxTransparent.loginText:focus {
+  border-image: linear-gradient(to right, #d46565, #5a9117 100%);
+  -webkit-border-image: -webkit-linear-gradient(
+    to right,
+    #d46565 0%,
+    #5a9117 100%
+  );
+  border: 2px solid transparent;
+  border-image-slice: 1;
+}
+.textboxTransparent {
+  color: var(--font-color) !important;
+  border-radius: 10px;
+}
+::placeholder {
+  color: var(--font-color) !important;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: var(--font-color);
+}
+
+#loginForm {
+  /*width: 40%; */
+  margin: 0px auto !important;
+  width: 100%;
+}
+.nameHeading {
+  text-align: center;
+  font-size: 40px;
+  font-family: "Arima Madurai Medium";
+  text-transform: capitalize;
+  margin-top: 50px !important;
+  margin: auto;
+  margin-bottom: 30px !important;
+}
+/*img{
+    margin-bottom: 20px;
+}*/
+.contentHeading {
+  color: var(--selected-color);
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 16px;
+}
+.centerLoginBlock {
+  margin: 0 auto;
+  align-items: center;
+  justify-content: space-around;
+  float: none;
+}
+/*
+.Absolute-Center {
+    margin: auto;
+    position: relative;
+    top: 0; left: 0; bottom: 0; right: 0;
+}
+.Absolute-Center.is-Responsive {
+    width: 50%;
+    margin-top:30%;
+    vertical-align: middle;
+    text-align: center;
+}
+*/
+
+#loginForm .form-group {
+  margin-bottom: 30px !important;
+}
+.field-icon {
+  float: right;
+  margin-left: -26px;
+  margin-top: 12px;
+  position: relative;
+  z-index: 2;
+  color: var(--font-color);
+  font-size: 18px;
+}
+
+@media screen and (max-width: 768px) {
+  .textboxTransparent.loginText {
+    width: 250px !important;
+    font-size: 14px !important;
+  }
+
+  .loginbtn {
+    padding: 0px 20px !important;
+    font-size: 14px !important;
+    align-items: center;
+    border-radius: 10px;
+  }
+
+  .nameHeading {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+
+    font-size: 29px !important;
+  }
+  #loginForm .form-group {
+    margin-bottom: 10px !important;
+  }
+}
+.login-page {
+  background-size: cover !important;
+  background-position: center top 0px !important;
+}
+
+.password-mask {
+  -webkit-text-security: disc;
+  -moz-webkit-text-security: disc;
+  -moz-text-security: disc;
+}

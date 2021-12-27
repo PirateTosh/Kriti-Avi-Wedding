@@ -1,0 +1,179 @@
+/* .eventDetailsBtn .btn{
+    padding: 4px 32px !important;
+    font-size: 15px !important;
+    border-radius: none !important;
+    margin-right: 20px!important;
+    background: none !important;
+    border: 2px solid white;
+    color: white ;
+} */
+/* .active{
+    background-color:white !important; ;
+    color: var(--selected-color) !important;
+    border:2px solid var(--selected-color) !important;
+} */
+.eventDetailsBtnCenter{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+/* .eventDetailsBtn .btn:hover{
+    border: 2px solid var(--selected-color) !important;
+    color: var(--selected-color) !important;
+    background: white !important;
+} */
+.eventDetailsCls
+{
+  text-align: center;
+  padding: 15px;
+  margin:0 auto;
+  padding-top: 60px;
+}
+.eventBtnCls
+{
+    text-align: center;
+    margin:0px auto;
+}
+.eventBtnDirection
+{
+    font-size: 15px;
+    padding: 10px 40px;
+    text-align: center;
+    background: transparent!important;
+    border:1px solid var(--font-color) !important;
+    border-radius:3px;
+    color:var(--font-color);
+    cursor: pointer; 
+    border-radius:none!important;
+    text-transform: uppercase;
+}
+.eventBtnDirection:hover
+{
+    background-color: #fff!important;
+    cursor: pointer;
+    border: 1px solid var(--selected-color) !important;
+    color: var(--selected-color) !important;
+    text-decoration: none;
+}
+.eventBtn
+{
+    display: inline-block;
+    padding: 2px 13px !important;
+    font-size: 15px !important;
+    border-radius: none !important;
+    background: none ;
+    margin-right: 10px;
+    border: 2px solid var(--font-color);
+    color: var(--font-color) ;
+}
+.eventBtn:hover
+{
+    border: 2px solid var(--selected-color) !important;
+    color: var(--selected-color) !important;
+    background: white !important;
+    cursor: pointer;
+}
+
+.owl-stage {
+    display: -webkit-flex;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.owl-item{
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex !important;
+    height: auto !important;
+}
+.eventDetDiv
+{
+    padding-right: 20px;
+    display: inline-block;
+    /*width: 349px;*/
+    text-align: left;
+    /* padding: 30px; */
+    vertical-align: top;
+}
+.right-div
+{
+    display: inline-block;
+    max-width: 150px;
+    text-align: left;
+    padding: 30px;
+    background-color: #ddd;
+    border-radius: 3px;
+    margin: 15px;
+}
+.left-text, .right-text
+{
+    font: 16px 'Courier New', monospace;
+    color: #000;
+}
+
+.eventDetailsCls .alice-carousel__prev-btn {
+    left: -40px;
+}
+.eventDetailsCls .alice-carousel__next-btn {
+    right: -40px;
+}
+
+.alice-carousel .alice-carousel__prev-btn-item {
+    color: #fff;
+    border-color: #fff;
+}
+
+.alice-carousel__wrapper {
+    border: none !important;
+}
+
+.alice-carousel__prev-btn-item.__inactive,
+.alice-carousel__next-btn-item.__inactive {
+    opacity: 1.4;
+}
+
+@media screen and (max-width: 600px) {
+    .eventBtn
+    {
+        padding: 2px 5px !important;
+        font-size: 14px !important;
+        margin-right: 8px;
+    }
+    .eventDetDiv
+    {
+        max-width: 100%;
+        margin-right: 0 !important;
+    }
+    .eventDetDiv .figure .eventDetailsBtnCenter{
+        position: relative !important;
+        left: auto !important;
+        bottom: auto !important;
+    }
+    .eventDetDiv .figure.bridgeImage{
+        padding-bottom: 10px !important;
+        
+    }
+    .eventBtnDirection
+    {
+        font-size: 12px !important;
+        padding: 10px 20px!important;
+        
+    }
+    
+}
+
+.eventDetDiv .figure-caption {
+    /*height: 100%;*/
+}
+.eventDetDiv .figure.bridgeImage {
+  position: relative;
+  height: 100%;
+  padding-bottom: 50px;
+}
+.eventDetDiv .figure .eventDetailsBtnCenter{
+  position: absolute;
+  bottom: 20px;
+  left: 70px;
+}

@@ -1,0 +1,35 @@
+.legal-content{
+  color: var(--font-color);
+}
+.legal-content .legal-header{
+  margin-bottom: 20px;
+}
+.legal-content .legal-header p{
+  margin-bottom: 0;
+  text-align: center;
+}
+.legal-content ul{
+  padding: 0;
+}
+.legal-content p, .legal-content li{
+  font-size: 12px;
+}
+.legal-content ul p.title{
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.legal-content li{
+  position: relative;
+}
+
+.legal-content li::before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 5px;
+  background: var(--font-color);
+  left: -10px;
+  top: 5px;
+  border-radius: 50%;
+}

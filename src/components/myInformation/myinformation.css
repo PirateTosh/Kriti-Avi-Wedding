@@ -1,0 +1,437 @@
+.abl-filename {
+  padding: 5px 20px !important;
+}
+.accordion .card-header:after {
+  font-family: "FontAwesome";
+  content: "\f106";
+  float: right;
+}
+.accordion .card-header.collapsed:after {
+  /* symbol for "collapsed" panels */
+  content: "\F107";
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  padding: 6px;
+  line-height: 7px;
+  text-align: center;
+  vertical-align: middle;
+}
+.btnCommonMyinformation {
+  margin-bottom: 0px !important;
+}
+.btnStyle {
+  display: flex;
+}
+select option {
+  color: var(--selected-color);
+}
+.myInformatinoBtn {
+  border: 1px solid white;
+  padding: 0px 25px;
+  color: white;
+  margin-left: 10%;
+  cursor: pointer;
+}
+.myInformatinoBtn:hover {
+  border: 1px solid var(--selected-color);
+  color: var(--selected-color) !important;
+  background: white !important;
+}
+.secondRow {
+  margin-top: 20px !important;
+}
+
+.myInformation-card-header {
+  border-radius: 0 !important;
+  border-bottom: none !important;
+  cursor: pointer;
+}
+.myInformation-card {
+  background: none !important;
+  border: none;
+}
+.myInformation-card-body {
+  position: relative !important;
+}
+.fa-wheelchair {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 5px;
+  margin-right: 10px;
+}
+.fa-check {
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  padding: 2px;
+  margin-left: 20px;
+}
+.myInformationankurbtn {
+  padding: 3px 30px;
+  background: none;
+  border: 2px solid var(--font-color);
+  color: var(--font-color);
+  margin-bottom: 15px;
+}
+
+.myInformationBtn {
+  margin: 10px auto;
+  color: var(--font-color);
+  text-transform: uppercase;
+  background: transparent;
+  border: 1px solid var(--font-color);
+  width: auto;
+  height: 40px;
+  font-size: 18px;
+  padding: 0px 40px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.myInformationBtn:hover {
+  background: #fff;
+  color: var(--selected-color);
+  border: 1px solid var(--selected-color);
+}
+
+.myInformationankurbtn:hover {
+  color: var(--selected-color);
+  border: 1px solid var(--selected-color);
+}
+.myInformationankurbtn {
+  margin-right: 10px;
+}
+.form-control-color {
+  margin-top: 15px !important;
+  border-radius: 0 !important;
+  /* text-transform: uppercase; */
+  color: var(--font-color);
+}
+
+.form-control-color:focus {
+  color: var(--font-color) !important;
+}
+
+.form-control-color::-webkit-input-placeholder {
+  color: var(--font-color) !important;
+}
+::placeholder {
+  color: var(--font-color);
+}
+.MyaddressBtn {
+  padding: 3px 6px;
+  background: none;
+  border: 1px solid var(--font-color);
+  margin-right: 9px;
+}
+.MyaddressBtn:hover {
+  background: white;
+  color: var(--selected-color);
+  border: 1px solid var(--selected-color);
+}
+
+.btn-bs-file {
+  position: relative;
+}
+.btn-bs-file input[type="file"] {
+  position: absolute;
+  top: -9999999;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  width: 0;
+  height: 0;
+  outline: none;
+  cursor: inherit;
+}
+
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  width: 100% !important;
+}
+
+.circleInfo {
+  position: absolute;
+  top: 3px;
+  font-size: 10px;
+  border: 1px solid var(--font-color);
+  border-radius: 50%;
+  padding: 1px;
+  width: 15px;
+  height: 15px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p.info-text {
+  position: relative;
+  display: flex;
+  padding: 0 1.25rem;
+  color: var(--font-color);
+  max-width: 480px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+p.info-text p.inner-text {
+  padding-left: 20px;
+}
+
+.MyaddressBtn {
+  padding: 1px 7px;
+  background: none;
+  border: 1px solid white;
+  margin-right: 4px;
+  color: white;
+}
+.MyaddressBtn:hover {
+  background: white;
+  color: var(--selected-color);
+  border: 2px solid var(--selected-color);
+}
+
+.MYPASSPORTYES {
+  margin-left: 38%;
+  margin-top: 7px;
+  margin-right: 15px;
+  padding: 2px 10px;
+}
+.MYPASSPORTNO {
+  padding: 2px 10px;
+  margin-left: 10px;
+}
+.yes {
+  padding: 6px 20px;
+}
+
+.travellingTxt {
+  margin-top: 10px;
+}
+.myAddressText {
+  margin: 0px !important;
+  padding: 0px !important;
+  font-size: 14px !important;
+}
+.uploadPhotoId {
+  text-align: center;
+  margin-top: 20px;
+}
+.Myaddress-btn-bs-file {
+  background: transparent !important;
+  padding: 7px 47px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.uploadPhotoId label {
+  display: initial !important;
+}
+.saveMyaddressBtn {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.myPassportBtnTop {
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex;
+  overflow: auto;
+  text-align: center;
+}
+.informationScreenDivides {
+  margin-bottom: 15px;
+}
+.informationScreenDividesTop {
+  margin-top: 20px;
+}
+.myPassportBtnTop .ankur {
+  width: auto;
+  height: 40px;
+  margin: 0px 5px;
+  font-size: 15px;
+  padding: 0px 40px;
+  text-align: center;
+  background: transparent;
+  border: 1px solid #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+.myPassportBtnTop .ankur:hover {
+  border: 1px solid var(--selected-color) !important;
+  color: var(--selected-color);
+  background-color: #fff !important;
+}
+.abl-disabled-btn {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+/* .myPassportBtnTop .ankur{
+    display: inline-block;
+    border: 1px solid white;
+  
+    text-transform: uppercase;
+    padding: 4px 9px;
+    margin-right: 6px;
+    color: white;
+} */
+/*  .active{
+    background-color:white !important; ;
+    color: var(--selected-color) !important;
+    border:1px solid var(--selected-color) !important;
+} */
+.myPassportBtn {
+  text-align: center !important;
+  margin-top: 20px;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex !important;
+}
+
+.myPassportBtn .ankur {
+  display: inline-block;
+  border: 1px solid var(--font-color);
+  text-transform: uppercase !important;
+}
+.myPassportBtn .ankur:hover {
+  border: 1px solid var(--selected-color);
+  color: var(--selected-color);
+  text-transform: uppercase;
+  background: white;
+  cursor: pointer;
+}
+
+.radio-group label {
+  color: var(--font-color);
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 4px 20px;
+  /*  width: auto !important; */
+  border: 1px solid var(--font-color);
+  margin-bottom: 18px;
+}
+input[type="radio"]:checked + label {
+  color: var(--selected-color) !important;
+  background: white;
+  border-color: var(--selected-color);
+}
+
+input[type="checkbox"]:checked + label {
+  color: var(--selected-color) !important;
+  background: white;
+  border-color: var(--selected-color);
+}
+
+.myPassportBtnRadio {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .myPassportBtnTop {
+    margin-left: auto !important;
+  }
+  .secondRow {
+    margin-top: 160px !important;
+  }
+  .accordion .card-header.collapsed:after {
+    border: transparent !important;
+    border-radius: none !important;
+    padding: 0px !important;
+    line-height: 28px !important;
+  }
+
+  .myInformationBtn {
+    font-size: 14px !important;
+    padding: 0px 20px !important;
+    line-height: 40px;
+  }
+  .myPassportBtnTop .ankur {
+    font-size: 12px;
+    padding: 0px 15px;
+  }
+  .form-control-color {
+    margin-top: 10px !important;
+    font-size: 12px !important;
+  }
+}
+
+.dialog-ovelay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999999;
+}
+.dialog-msg {
+  color: var(--font-color);
+  padding: 10px;
+  width: 200px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.card-title i {
+  padding-right: 10px;
+}
+
+p.disable-msg {
+  color: var(--font-color);
+  padding: 0 1.25rem;
+}
+
+.react-datepicker-popper[data-placement^="top"] {
+  width: 100%;
+  left: -20px !important;
+  top: 20px !important;
+}
+
+.react-datepicker {
+  width: 100%;
+}
+
+.react-datepicker__month-container {
+  clear: both;
+  width: 100%;
+}
+
+.react-datepicker__day {
+  width: 2.5rem !important;
+  font-size: 16px;
+}
+
+.react-datepicker__day-name {
+  width: 2.5rem !important;
+  font-size: 16px;
+}
+
+.react-datepicker__header__dropdown.react-datepicker__header__dropdown--select {
+  padding: 15px;
+  font-size: 16px;
+}
+
+select.react-datepicker__month-select {
+  margin-right: 15px;
+}
+
+.react-datepicker__current-month.react-datepicker__current-month--hasYearDropdown.react-datepicker__current-month--hasMonthDropdown {
+  font-size: 16px;
+}
+
+.react-datepicker__day--outside-month {
+  color: #ccc;
+  pointer-events: none;
+}
+.clear-img-icon {
+  position: absolute;
+  right: -40px;
+  top: 0;
+  height: 100%;
+  background: #fff;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
