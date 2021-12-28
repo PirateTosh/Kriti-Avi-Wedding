@@ -32,6 +32,9 @@ class aboutPage extends React.Component {
       appDetails: cloneDeep(props.appDetails)
     }
   }
+  componentDidMount() {
+    $("body").addClass("additionalBG");
+  }
   componentWillReceiveProps(nextProps) {
     if (!nextProps.welcomeData) {
       fetchWelcomeDetails();
@@ -52,6 +55,7 @@ class aboutPage extends React.Component {
       }
     }
   }
+ 
   render() {
   
     let appData = this.props && this.props.welcomeData;

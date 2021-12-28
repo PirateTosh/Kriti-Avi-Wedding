@@ -28,7 +28,7 @@ class dashboard extends React.Component {
       $("#youClickDiv2 #youIcon2").remove();
     }
     $("body").attr("class", "");
-    $("body").addClass("appWelcomeBackground");
+    $("body").addClass("additionalBG");
     if (isMobile) {
       $("#spanHeaderText").html(pageTitle);
       $(".notificationBell").show();
@@ -61,7 +61,7 @@ class dashboard extends React.Component {
   changeText(message) {
     if (message) {
       let arrayItem = message.split("\n");
-      let text = arrayItem.map(item => {
+      let text = arrayItem.map((item) => {
         return item;
       });
       return text;
@@ -121,7 +121,7 @@ class dashboard extends React.Component {
             position: "absolute",
             top: "0px",
             width: "100%",
-            height: "100%"
+            height: "100%",
           }}
         >
           <div className="modal-body" style={{ padding: "0px" }}>
@@ -141,7 +141,7 @@ class dashboard extends React.Component {
                 paddingTop: "10px",
                 paddingLeft: "17px",
                 zIndex: "1",
-                top: "8%"
+                top: "8%",
               }}
             >
               X
@@ -204,7 +204,7 @@ function mapStateToProps(state) {
   return {
     welcomeData: getWelcomeDetails(state),
     eventId: getEventId(state),
-    guestId: getGuestId(state)
+    guestId: getGuestId(state),
   };
 }
 export default connect(mapStateToProps)(dashboard);

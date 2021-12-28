@@ -1,14 +1,19 @@
 import React, { Fragment } from "react";
 import { connect } from "react-redux";
+import $ from "jquery";
 import { browserHistory } from "react-router";
 
 import _ from "lodash";
 
-import { getFeaturedPhotos, getGuestSharedPhotos, getSettings } from "../../stateSelector";
+import {
+  getFeaturedPhotos,
+  getGuestSharedPhotos,
+  getSettings,
+} from "../../stateSelector";
 import {
   fetchFeaturedPhotos,
   fetchPhotos,
-  sharePhoto
+  sharePhoto,
 } from "../../../../api/photoShared";
 
 import store from "../../../../store";
@@ -32,16 +37,20 @@ class Home extends React.PureComponent {
       guestShared: props.guestShared,
       gridLayout: 3,
       files: null,
-      guestId: isLoggedIn == 'true' ? window.localStorage.getItem("guestId") : null,
+      guestId:
+        isLoggedIn == "true" ? window.localStorage.getItem("guestId") : null,
       guestName:
-        isLoggedIn == 'true'
-          ? `${window.localStorage.getItem("guestFirstName")} ${window.localStorage.getItem("guestLastName")}`
-          : null
+        isLoggedIn == "true"
+          ? `${window.localStorage.getItem(
+              "guestFirstName"
+            )} ${window.localStorage.getItem("guestLastName")}`
+          : null,
     };
   }
   componentDidMount() {
+    $("body").addClass("additionalBG");
     const {
-      params: { subPath }
+      params: { subPath },
     } = this.props;
     if (!subPath || PHOTOS.SUB_PATH[subPath.toUpperCase()]) {
       subPath
@@ -61,16 +70,16 @@ class Home extends React.PureComponent {
   processPhoto(data, files) {
     const image = files[0];
     uploadPhoto(image)
-      .then(url => {
+      .then((url) => {
         const payload = {
           createdBy: this.state.guestId,
           url,
           featured: false,
           sticky: false,
           status: "published",
-          ...data
+          ...data,
         };
-        sharePhoto(payload).then(res => {
+        sharePhoto(payload).then((res) => {
           this.setState({ files: null }, () => {
             browserHistory.push(
               `/${PHOTOS.BASE_PATH}/${PHOTOS.SUB_PATH.GUESTS}`
@@ -81,7 +90,7 @@ class Home extends React.PureComponent {
           );
         });
       })
-      .catch(e => {
+      .catch((e) => {
         alert(e, "Upload failed");
       });
   }
@@ -94,7 +103,7 @@ class Home extends React.PureComponent {
 
   renderRedirect = () => {
     const {
-      params: { subPath }
+      params: { subPath },
     } = this.props;
     if (subPath && !PHOTOS.SUB_PATH[subPath.toUpperCase()]) {
       return browserHistory.push("/");
@@ -110,13 +119,13 @@ class Home extends React.PureComponent {
               guestId={this.state.guestId}
               files={this.state.files}
               uploadPhoto={(data, files) => this.processPhoto(data, files)}
-              cancelUpload={() => this.setState({files: null })}
+              cancelUpload={() => this.setState({ files: null })}
             />
           ) : (
             <Fragment>
               <Header
                 {...this.props}
-                changeLayout={value => this.setState({ gridLayout: value })}
+                changeLayout={(value) => this.setState({ gridLayout: value })}
                 column={this.state.gridLayout}
                 guestId={this.state.guestId}
               />
@@ -128,7 +137,9 @@ class Home extends React.PureComponent {
                 }
                 column={this.state.gridLayout}
               />
-              {this.state.guestId && <AddIcon onFileSelection={e => this.onFileSelect(e)} />}
+              {this.state.guestId && (
+                <AddIcon onFileSelection={(e) => this.onFileSelect(e)} />
+              )}
             </Fragment>
           )}
         </PageContent>
@@ -141,7 +152,7 @@ function mapStateToProps(state) {
   return {
     featured: getFeaturedPhotos(state),
     guestShared: getGuestSharedPhotos(state),
-    photoShareSetting: getSettings(state)
+    photoShareSetting: getSettings(state),
   };
 }
 

@@ -41,6 +41,7 @@ class destination extends React.Component {
     if (this.state.showPlacesToVisit) {
       $(".backIconMobile").hide();
       $("#chatBackIcon").show();
+
       $("#chatBackIcon").click(
         function (e) {
           $("#chatBackIcon").hide();
@@ -63,6 +64,7 @@ class destination extends React.Component {
 
     if (isMobile) {
       $("#spanHeaderText").html("DUBAI");
+      $("body").addClass("additionalBG");
       $(".notificationBell").show();
       $(".appLogo").hide();
       $(".chat").show();
@@ -89,7 +91,7 @@ class destination extends React.Component {
     let id = get(event.target, "attributes['id'].value");
     let data =
       this.state.destinationData &&
-      this.state.destinationData.filter(data => {
+      this.state.destinationData.filter((data) => {
         if (data.destinationId === id) {
           return data;
         }
@@ -107,7 +109,7 @@ class destination extends React.Component {
     } else {
       let destinationDetails =
         this.state.destinationData &&
-        this.state.destinationData.filter(data => {
+        this.state.destinationData.filter((data) => {
           if (data.destinationId === this.state.defaultId) {
             return data;
           }
@@ -153,13 +155,13 @@ class destination extends React.Component {
     let invitedEvents = this.props.eventDetails;
     let invitedEventDestinations = [];
     invitedEvents &&
-      invitedEvents.map(a => {
+      invitedEvents.map((a) => {
         invitedEventDestinations.push(a.subEventDestination);
       });
     invitedEventDestinations = _.uniq(invitedEventDestinations);
     let destinations = [];
     allDestinations &&
-      allDestinations.map(a => {
+      allDestinations.map((a) => {
         if (_.includes(invitedEventDestinations, a.destinationName)) {
           destinations.push({
             destinationId: a.destinationId,
@@ -170,7 +172,7 @@ class destination extends React.Component {
     let destinationExist = destinations.length > 0 ? true : false;
     let destinationData2 = [];
     destinationData &&
-      destinationData.map(a => {
+      destinationData.map((a) => {
         if (_.includes(_.map(destinations, "destinationId"), a._id)) {
           destinationData2.push(a);
         }
@@ -187,7 +189,7 @@ class destination extends React.Component {
               <div className="col-md-12 destinationBtn mT90">
                 <div className="d-none d-lg-block col-md-12 col-sm-12 col-xs-12">
                   {destinations &&
-                    destinations.map(destination => {
+                    destinations.map((destination) => {
                       return (
                         <button
                           name="button"
@@ -209,7 +211,7 @@ class destination extends React.Component {
                 <div className="d-md-block d-lg-none d-xl-none destinationMobile">
                   <div className="col-md-12 col-sm-12 col-xs-12 scrollMobile">
                     {destinations &&
-                      destinations.map(destination => {
+                      destinations.map((destination) => {
                         return (
                           <button
                             name="button"
@@ -299,7 +301,7 @@ class destination extends React.Component {
                                     Currency
                                   </span>
                                   {defaultDestination.otherDetails.destinationCurrency.map(
-                                    currency => {
+                                    (currency) => {
                                       if (
                                         currency &&
                                         currency.rate &&
@@ -489,7 +491,7 @@ class destination extends React.Component {
                                     Currency
                                   </span>
                                   {defaultDestination.otherDetails.destinationCurrency.map(
-                                    currency => {
+                                    (currency) => {
                                       if (
                                         currency &&
                                         currency.rate &&

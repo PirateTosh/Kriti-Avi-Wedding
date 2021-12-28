@@ -52,7 +52,7 @@ export const SendIcon = styled.button`
   padding: 5px 8px 0;
   margin: 0;
   border: none;
-  background: transparent;
+
   & i {
     margin: 0 0 0 10px;
     vertical-align: middle;
@@ -63,7 +63,7 @@ export const List = styled.ul`
   margin: 0;
   padding: 0;
   list-style: none;
-  &.nesting li{
+  &.nesting li {
     margin-left: 1rem;
   }
   & li {

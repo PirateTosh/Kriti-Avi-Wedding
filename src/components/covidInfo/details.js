@@ -1,5 +1,5 @@
 import React from "react";
-import DatePicker from "react-datepicker";
+
 import {
   saveGuestInformationDetails,
   uploadPhotoDetails,
@@ -8,11 +8,10 @@ import {
   uploadInsurancePhotoDetails,
   fetchGuestInformation,
 } from "../../api/guestInformationApi";
-import { fetchAppSettings } from "../../api/appDetApi.js";
+
 import set from "lodash/set";
 import {
   getAppDetails,
-  getGuestId,
   getGuestFamily,
   getGuestInformation,
   getNearestAirportList,
@@ -485,7 +484,9 @@ class Details extends React.Component {
     });
   }
 
-  componentDidMount() {}
+  componentDidMount() {
+    $("body").addClass("additionalBG");
+  }
 
   render() {
     $(".backIcon").show();
@@ -523,308 +524,54 @@ class Details extends React.Component {
         {appdata &&
           appdata.appDetails &&
           appdata.appDetails.selectedAppGuestInfo &&
-          appdata.appDetails.selectedAppGuestInfo.map((x) => {
-            if (x === "guestDetails") {
-              return (
-                <div className="informationScreenDivides appBodyFontFamily">
-                  <div
-                    className="card-header myInformation-card-header appBodyFontColor appGradientColor  collapsed"
-                    data-toggle="collapse"
-                    href="#MEAL PREFERENCES"
-                  >
-                    <a className="card-title">
-                      <i className="icon-my-details" aria-hidden="true" /> MY
-                      DETAILS
-                      <i className="fa dynamicAdd" aria-hidden="true" />
-                    </a>
-                  </div>
-                  <div
-                    id="MEAL PREFERENCES"
-                    className="card-body myInformation-card-body appGradientColor collapse"
-                    data-parent="#accordion"
-                  >
-                    <div className="row">
-                      <div className="myPassportBtnTop">
-                        {guestFamily &&
-                          guestFamily.map((guest) => {
-                            return (
-                              <button
-                                className={`btn btn-default btn-responsive ankur appBodyFontFamily appBodyFontColor ${
-                                  guest.guestId === defaultGuest._id
-                                    ? "active"
-                                    : ""
-                                }`}
-                                key={guest.guestId}
-                                id={guest.guestId}
-                                onClick={this.getGuestFamilyDetails.bind(this)}
-                              >
-                                {guest.guestName}
-                              </button>
-                            );
-                          })}
-                      </div>
-                    </div>
-                    {defaultGuest && (
-                      <div>
-                        <div className="row">
-                          <div className="col-md-6">
-                            <select
-                              className="form-control form-control-color appBodyFontFamily appBodyFontColor"
-                              data-live-search="true"
-                              data-size="10"
-                              id={defaultGuest._id}
-                              onChange={this.updateGuestDetail.bind(this)}
-                              value={
-                                defaultGuest.guestTitle
-                                  ? defaultGuest.guestTitle
-                                  : null
-                              }
-                              name="guestTitle"
-                            >
-                              <option disabled value="">
-                                Select Title
-                              </option>
-                              {list &&
-                                list.map((item) => {
-                                  return (
-                                    <option key={item.id} value={item.name}>
-                                      {item.name}
-                                    </option>
-                                  );
-                                })}
-                            </select>
-                          </div>
-                          <div className="col-md-6"></div>
-                        </div>
-                        <div className="row">
-                          <div className="col-md-6">
-                            <input
-                              className="form-control form-control-color appBodyFontFamily appBodyFontColor"
-                              placeholder="NAME"
-                              onChange={this.updateGuestDetail.bind(this)}
-                              name="guestFirstName"
-                              type="Text"
-                              value={defaultGuest.guestFirstName}
-                              id="guestFirstName"
-                              tabIndex="1"
-                            />
-                            <span id="ErrorName" style={{ color: "white" }} />
-                          </div>
-                          <div className="col-md-6">
-                            <input
-                              type="text"
-                              className="form-control form-control-color appBodyFontColor"
-                              id="Lnameid"
-                              placeholder="LAST NAME"
-                              value={defaultGuest.guestLastName}
-                              name="guestLastName"
-                              onChange={this.updateGuestDetail.bind(this)}
-                            />
-                            <span id="ErrorLName" style={{ color: "white" }} />
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-md-6">
-                            <input
-                              type="text"
-                              className="form-control form-control-color appBodyFontFamily appBodyFontColor"
-                              id="numberid"
-                              placeholder="MOBILE"
-                              value={defaultGuest.guestContactNo}
-                              name="guestContactNo"
-                              onChange={this.updateGuestDetail.bind(this)}
-                            />
-                            <span id="NumberError" style={{ color: "white" }} />
-                          </div>
-                          <div className="col-md-6">
-                            <input
-                              readOnly
-                              type="email"
-                              className="form-control form-control-color appBodyFontFamily appBodyFontColor"
-                              id="emailid"
-                              aria-describedby="emailHelp"
-                              placeholder="EMAIL"
-                              name="guestPersonalEmail"
-                              value={defaultGuest.guestPersonalEmail}
-                              onChange={this.updateGuestDetail.bind(this)}
-                            />
-                            <span id="ErrorEmail" style={{ color: "white" }} />
-                          </div>
-                        </div>
-                        <div className="row">
-                          <div className="col-md-6">
-                            <DatePicker
-                              className="form-control form-control-color appBodyFontFamily appBodyFontColor"
-                              selected={
-                                defaultGuestBirthday &&
-                                defaultGuestBirthday._isValid
-                                  ? defaultGuestBirthday
-                                  : null
-                              }
-                              placeholderText="Select date of birth"
-                              onChange={this.updateGuestBD}
-                              readOnly={true}
-                              calendarClassName="rasta-stripes"
-                              peekNextMonth
-                              showMonthDropdown
-                              showYearDropdown
-                              showDisabledMonthNavigation
-                              maxDate={moment()}
-                              dateFormat="DD-MM-YYYY"
-                              dropdownMode="select"
-                            />
-                          </div>
-                          <div className="col-md-6">
-                            <select
-                              className="form-control form-control-color appBodyFontFamily appBodyFontColor"
-                              data-live-search="true"
-                              data-size="10"
-                              id={defaultGuest._id}
-                              onChange={this.updateGuestDetail.bind(this)}
-                              value={defaultGuest.guestGender}
-                              name="guestGender"
-                              placeholder="Gender"
-                            >
-                              <option value="" disabled>
-                                Select Gender
-                              </option>
-                              {genderList &&
-                                genderList.map((item) => {
-                                  return (
-                                    <option key={item.id} value={item.id}>
-                                      {item.name}
-                                    </option>
-                                  );
-                                })}
-                            </select>
-                          </div>
-                        </div>
-                        {this.state.photoField || photo ? (
-                          <div className="row">
-                            {" "}
-                            <label
-                              className="btn-bs-file myInformationBtn ankur appBodyFontFamily appBodyFontColor active abl-filename"
-                              id="visaPhotoLabel"
-                            >
-                              <span>File Selected</span>&nbsp;&nbsp;
-                              <i
-                                className="fa fa-trash-o clear-img-icon"
-                                onClick={this.clearPhotoID.bind(this)}
-                              ></i>
-                            </label>
-                          </div>
-                        ) : null}
-                        {this.state.photoField || photo ? null : (
-                          <div className="row">
-                            <label
-                              className="btn-bs-file Myaddress-btn-bs-file myInformationBtn"
-                              id="photoLabel"
-                              name="photoFile"
-                              onClick={() => {
-                                this.refs.photoUpload.click();
-                              }}
-                            >
-                              UPLOAD Photo
-                            </label>
-                            <input
-                              type="file"
-                              tabIndex="0"
-                              id="photoFile"
-                              accept="image/*"
-                              ref="photoUpload"
-                              className="myInformationBtn"
-                              style={{ display: "none" }}
-                              onChange={(e) => {
-                                this.setState({
-                                  photoField: e.target.files[0],
-                                });
-                              }}
-                            />
-                            <br />
-                          </div>
-                        )}
-                        <div className="row">
-                          <div className="update-info">
-                            Please click save button to save your changes.
-                          </div>
-                          <button
-                            className="myInformationBtn appBodyFontFamily appBodyFontColor btnSave"
-                            onClick={this.savePersonalDetails.bind(this)}
-                          >
-                            Save
-                          </button>
-                        </div>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              );
-            }
-          })}
-        {appdata &&
-          appdata.appDetails &&
-          appdata.appDetails.selectedAppGuestInfo &&
           appdata.appDetails.selectedAppGuestInfo.map((list) => {
-            if (list === "guestAddress") {
-              return (
-                <Address
-                  guestFamilyDetails={defaultGuest}
-                  familyMember={guestFamily}
-                  getGuestFamilyDetail={this.getGuestFamilyDetails}
-                  guestDetailHandler={this.updateGuestDetail}
-                  airportList={nearestAirportList}
-                  countryList={countryList}
-                  saveDetails={this.saveAddressDetails}
-                />
-              );
-            }
-          })}
-        {appdata &&
-          appdata.appDetails &&
-          appdata.appDetails.selectedAppGuestInfo &&
-          appdata.appDetails.selectedAppGuestInfo.map((list) => {
-            if (list === "guestPhotoID") {
+            if (list === "guestVisaInfo") {
               return guestFamily && guestFamily.length > 0 ? (
-                <Passport
+                <Visa
+                  guestFamilyDetails={defaultGuest}
                   setLoading={(loading) => {
                     this.setState({
                       loading,
                     });
                   }}
-                  guestFamilyDetails={defaultGuest}
-                  guestDetailHandler={this.updateGuestDetail}
                   familyMember={guestFamily}
-                  photoIDQuestion={photoIDQuestion}
-                  getGuestFamilyDetail={this.getGuestFamilyDetails}
                   appSettings={appSettings}
+                  getGuestFamilyDetail={this.getGuestFamilyDetails}
+                  saveDetails={this.saveGuestDetails}
+                  familyMember={guestFamily}
+                  openFolder={this.openBrowserToSelectPhoto}
+                  visaQuestion={visaQuestion}
+                  uploadVisaImage={this.uploadVisaPhoto.bind(this)}
                 />
               ) : null;
             }
           })}
-        {/* {appdata && appdata.appDetails && appdata.appDetails.selectedAppGuestInfo && appdata.appDetails.selectedAppGuestInfo.map(list => {
-          if (list === "guestVisaInfo") {
-            return (
-              guestFamily && guestFamily.length > 0 ? <Visa guestFamilyDetails={defaultGuest} setLoading={(loading) => {
-                this.setState({
-                  loading
-                });
-              }}
-                familyMember={guestFamily} appSettings={appSettings} getGuestFamilyDetail={this.getGuestFamilyDetails} saveDetails={this.saveGuestDetails} familyMember={guestFamily} openFolder={this.openBrowserToSelectPhoto} visaQuestion={visaQuestion} uploadVisaImage={this.uploadVisaPhoto.bind(this)} /> : null
-            );
-          }
-        })}
-        {appdata && appdata.appDetails && appdata.appDetails.selectedAppGuestInfo && appdata.appDetails.selectedAppGuestInfo.map(list => {
-          if (list === "guestInsuranceInfo") {
-            return (
-              guestFamily && guestFamily.length > 0 ? <Insurance guestFamilyDetails={defaultGuest} setLoading={(loading) => {
-                this.setState({
-                  loading
-                });
-              }}
-                familyMember={guestFamily} appSettings={appSettings} getGuestFamilyDetail={this.getGuestFamilyDetails} saveDetails={this.saveGuestDetails} familyMember={guestFamily} enableInsurance={this.enableInsurance} disableInsurance={this.disableInsurance} openFolder={this.openBrowserToSelectPhoto} uploadInsuranceImage={this.uploadInsurancePhoto.bind(this)} /> : null
-            );
-          }
-        })} */}
+        {appdata &&
+          appdata.appDetails &&
+          appdata.appDetails.selectedAppGuestInfo &&
+          appdata.appDetails.selectedAppGuestInfo.map((list) => {
+            if (list === "guestInsuranceInfo") {
+              return guestFamily && guestFamily.length > 0 ? (
+                <Insurance
+                  guestFamilyDetails={defaultGuest}
+                  setLoading={(loading) => {
+                    this.setState({
+                      loading,
+                    });
+                  }}
+                  familyMember={guestFamily}
+                  appSettings={appSettings}
+                  getGuestFamilyDetail={this.getGuestFamilyDetails}
+                  saveDetails={this.saveGuestDetails}
+                  familyMember={guestFamily}
+                  enableInsurance={this.enableInsurance}
+                  disableInsurance={this.disableInsurance}
+                  openFolder={this.openBrowserToSelectPhoto}
+                  uploadInsuranceImage={this.uploadInsurancePhoto.bind(this)}
+                />
+              ) : null;
+            }
+          })}
       </div>
     );
   }

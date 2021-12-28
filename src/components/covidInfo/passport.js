@@ -10,7 +10,7 @@ import {
 import { dataSavedSuccessfully } from "../../actions/popup.action";
 
 const maxLength = 9;
-const smallName = (name) => {
+const smallName = name => {
   if (name.length > maxLength) {
     return name.substring(0, maxLength - 3) + "...";
   }
@@ -35,11 +35,11 @@ class Passport extends Component {
 
   saveInfo(information) {
     let { familyMember } = this.props;
-    let currentGuest = familyMember.find((m) => {
+    let currentGuest = familyMember.find(m => {
       return m.guestId === this.state.currentGuestId;
     });
 
-    let primaryGuest = familyMember.find((m) => {
+    let primaryGuest = familyMember.find(m => {
       return m.guestIsPrimary;
     });
 
@@ -68,11 +68,11 @@ class Passport extends Component {
           .then(() => {
             this.props.setLoading(false);
           })
-          .catch((er) => {
+          .catch(er => {
             this.props.setLoading(false);
           });
       })
-      .catch((er) => {
+      .catch(er => {
         this.props.setLoading(false);
       });
   }
@@ -85,9 +85,9 @@ class Passport extends Component {
     this.props.setLoading(true);
     let self = this;
     uploadPhoto(this.state.page1)
-      .then((url1) => {
+      .then(url1 => {
         if (self.state.page2) {
-          uploadPhoto(this.state.page2).then((url2) => {
+          uploadPhoto(this.state.page2).then(url2 => {
             self.saveInfo({
               guestPassportImages: [url1, url2],
             });
@@ -100,7 +100,7 @@ class Passport extends Component {
         self.props.setLoading(false);
         store.dispatch(dataSavedSuccessfully("Photo ID saved successfully"));
       })
-      .catch((e) => {
+      .catch(e => {
         alert("Upload Failed");
         self.props.setLoading(false);
       });
@@ -108,7 +108,7 @@ class Passport extends Component {
 
   clearPassport() {
     let { familyMember } = this.props;
-    let primaryGuest = familyMember.find((m) => {
+    let primaryGuest = familyMember.find(m => {
       return m.guestIsPrimary;
     });
     this.props.setLoading(true);
@@ -118,11 +118,11 @@ class Passport extends Component {
           .then(() => {
             this.props.setLoading(false);
           })
-          .catch((er) => {
+          .catch(er => {
             this.props.setLoading(false);
           });
       })
-      .catch((er) => {
+      .catch(er => {
         this.props.setLoading(false);
       });
   }
@@ -130,7 +130,7 @@ class Passport extends Component {
   setGuest(guestId) {
     let { familyMember } = this.props;
 
-    let currentGuest = familyMember.find((m) => {
+    let currentGuest = familyMember.find(m => {
       return m.guestId === this.state.currentGuestId;
     });
     let passportImages = currentGuest.passportImages;
@@ -147,7 +147,7 @@ class Passport extends Component {
 
   componentWillReceiveProps(nextProps) {
     let { familyMember } = nextProps;
-    let currentGuest = familyMember.find((m) => {
+    let currentGuest = familyMember.find(m => {
       return m.guestId === this.state.currentGuestId;
     });
 
@@ -162,7 +162,7 @@ class Passport extends Component {
 
   render() {
     let { familyMember } = this.props;
-    let currentGuest = familyMember.find((m) => {
+    let currentGuest = familyMember.find(m => {
       return m.guestId === this.state.currentGuestId;
     });
     let passportImages = currentGuest.guestPassportImages;
@@ -189,7 +189,7 @@ class Passport extends Component {
           <div className="row">
             <div className="myPassportBtnTop">
               {familyMember &&
-                familyMember.map((guest) => {
+                familyMember.map(guest => {
                   return (
                     <button
                       className={`btn btn-default btn-responsive ankur appBodyFontFamily appBodyFontColor ${
@@ -214,8 +214,8 @@ class Passport extends Component {
                 <p className="info-text">
                   <i className="fa fa-info circleInfo" />
                   <p className="inner-text">
-                    For international guest, please upload your passport. For
-                    UAE Resident guest, please upload your valid govt. ID.
+                    Please upload any of the Govt. approved IDs: Driving
+                    Licence, Aadhar Card, Voter ID
                   </p>
                 </p>
               </div>
@@ -290,7 +290,7 @@ class Passport extends Component {
                           className="myInformationBtn"
                           ref="upload1"
                           style={{ display: "none" }}
-                          onChange={(e) => {
+                          onChange={e => {
                             this.setState({
                               page1: e.target.files[0],
                             });
@@ -342,7 +342,7 @@ class Passport extends Component {
                               className="myInformationBtn"
                               style={{ display: "none" }}
                               ref="upload2"
-                              onChange={(e) => {
+                              onChange={e => {
                                 this.setState({
                                   page2: e.target.files[0],
                                 });

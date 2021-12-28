@@ -601,3 +601,7 @@ ul.alice-carousel__dots {
 .table th {
   padding: 0.6rem;
 }
+
+.categories .icon-white:before {
+  color: white;
+}

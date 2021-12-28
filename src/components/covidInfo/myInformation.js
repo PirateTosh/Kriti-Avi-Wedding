@@ -59,8 +59,7 @@ class myInformation extends React.Component {
     this.sessionGuestId = localStorage.getItem("guestId");
     fetchGuestInformation(this.props.guestId || this.sessionGuestId, false);
     if (isMobile) {
-      $("#spanHeaderText").html("My Information");
-      $("body").addClass("additionalBG");
+      $("#spanHeaderText").html("COVID-19");
       $(".notificationBell").show();
       $(".appLogo").hide();
       $(".chat").show();
@@ -406,7 +405,7 @@ class myInformation extends React.Component {
     return (
       <div className="container appBodyFontFamily">
         <h3 className="headingTop headingTopMobile appBodyFontColor appBodyFontFamily d-none d-sm-block">
-          MY INFORMATION
+          COVID-19
         </h3>
         <div className="row secondRow pTop90">
           <div className="col-md-2" />
