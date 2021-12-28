@@ -32,7 +32,7 @@ const SliderContent = styled.div`
     margin-bottom: 3em;
     min-height: 2.5em;
     padding: 0 2em;
-    background : transparent;
+   
     height : auto;
     font-size: 14px;
     margin-bottom: 60px;

@@ -7,7 +7,7 @@ import {
   getWelcomeDetails,
   getEventName,
   getGuestFirstName,
-  getGuestLastName
+  getGuestLastName,
 } from "../../selectors";
 import { fetchWelcomeDetails } from "../../api/welcomeApi";
 import { connect } from "react-redux";
@@ -24,6 +24,7 @@ class dashboard extends React.Component {
   }
   componentDidMount() {
     $("body").addClass("appBody");
+    $("body").addClass("additionalBG");
     if (!this.props.welcomeData) {
       fetchWelcomeDetails(this.props.eventId);
     }
@@ -48,7 +49,7 @@ class dashboard extends React.Component {
   changeText(message) {
     if (message) {
       let arrayItem = message.split("\n");
-      let text = arrayItem.map(item => {
+      let text = arrayItem.map((item) => {
         return item;
       });
       return text;
@@ -142,7 +143,7 @@ class dashboard extends React.Component {
             position: "absolute",
             top: "0px",
             width: "100%",
-            height: "100%"
+            height: "100%",
           }}
         >
           <div className="modal-body" style={{ padding: "0px" }}>
@@ -161,7 +162,7 @@ class dashboard extends React.Component {
                 paddingLeft: "10px",
                 fontSize: "18px",
                 paddingTop: "10px",
-                paddingLeft: "17px"
+                paddingLeft: "17px",
               }}
             >
               X
@@ -241,7 +242,7 @@ function mapStateToProps(state) {
     eventName: getEventName(state),
     guestAddressing: getGuestAddressing(state),
     guestFirstName: getGuestFirstName(state),
-    guestLastName: getGuestLastName(state)
+    guestLastName: getGuestLastName(state),
   };
 }
 export default connect(mapStateToProps)(dashboard);

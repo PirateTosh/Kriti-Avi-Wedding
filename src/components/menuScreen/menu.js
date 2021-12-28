@@ -4,7 +4,7 @@ import {
   getEventName,
   getGuestId,
   getEventId,
-  getWelcomeDetails
+  getWelcomeDetails,
 } from "../../selectors";
 import { fetchWelcomeDetails } from "../../api/welcomeApi";
 import { connect } from "react-redux";
@@ -30,7 +30,7 @@ class Menu extends React.Component {
       appDetails: cloneDeep(props.appDetails),
       showIosPWABanner: false,
       showAndroidPWADownload: false,
-      downloadAndroidPWA: false
+      downloadAndroidPWA: false,
     };
     if (checkIsUserLoggedIn() === "false" || checkIsUserLoggedIn() != "true") {
       browserHistory.push("/");
@@ -79,7 +79,7 @@ class Menu extends React.Component {
     if (window.matchMedia("(display-mode: standalone)").matches) {
       this.setState({
         showAndroidPWADownload: false,
-        showIosPWABanner: false
+        showIosPWABanner: false,
       });
     }
   }
@@ -177,7 +177,8 @@ class Menu extends React.Component {
     return (
       <div className="categories">
         <h3 className="coupleName appBodyFontColor appNavbarFontFamily headingTop headingTopSize">
-          {AppTItle}
+          {/* {AppTItle} */}
+          &nbsp;
         </h3>
         <div className="container categoriesItem">
           <ul id="iconContainer" className="category-items">
@@ -211,7 +212,7 @@ class Menu extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "About") {
                   return (
                     <li>
@@ -367,14 +368,27 @@ class Menu extends React.Component {
                   </p>
                 </li>
               )}
-            {appdet &&
+
+            {/* COVID-INFO */}
+            <li>
+              <div
+                className="fa fa-heartbeat bigIcon icon-white"
+                style={{ backgroundColor: "#781800ff" }}
+                onClick={() => {
+                  browserHistory.push("/covid-info");
+                }}
+              />
+              <p className="iconName appBodyFontFamily appBodyFontColor">
+                COVID-19
+              </p>
+            </li>
+            {/* {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Travel Details") {
                   return (
                     <li>
-                      {/* <div className="icon-travel-details bigIcon icon-white" onClick={() => {browserHistory.push("/travelDetails")}}/> */}
                       <div
                         className="fa fa-heartbeat bigIcon icon-white"
                         style={{ backgroundColor: "#781800ff" }}
@@ -388,7 +402,7 @@ class Menu extends React.Component {
                     </li>
                   );
                 }
-              })}
+              })} */}
             {this.preferenceExist() ? (
               <li>
                 <div
@@ -503,7 +517,7 @@ class Menu extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Contact Details") {
                   return (
                     <li>
@@ -546,7 +560,7 @@ function mapStateToProps(state) {
     eventId: getEventId(state),
     guestId: getGuestId(state),
     appDetails: getAppDetails(state),
-    welcomeData: getWelcomeDetails(state)
+    welcomeData: getWelcomeDetails(state),
   };
 }
 

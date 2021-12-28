@@ -96,10 +96,10 @@
   text-rendering: optimizeLegibility;
 }
 .categories .icon-white:before {
-  color: var(--font-color);
+  color: white;
 }
 .icon-white:before {
-  color: var(--font-color);
+  color: white;
 }
 
 .icon-div:hover .icon-white:before {
@@ -140,7 +140,7 @@
   height: 40px;
   width: 40px;
   border-radius: 50%;
-  border: 1px solid var(--font-color);
+  border: 1px solid white;
   align-items: center;
   justify-content: center;
   padding: 0;
@@ -163,7 +163,7 @@
   width: 100%;
   border-radius: 50%;
   margin-bottom: 7.5px;
-  border: 1px solid var(--font-color);
+  border: 1px solid white;
   cursor: pointer;
   padding: 1px;
   height: 100%;
@@ -369,7 +369,7 @@ li {
 
 .menuName {
   display: inline-block;
-  color: var(--font-color);
+  color: white;
 }
 .colorGradient {
   background: linear-gradient(

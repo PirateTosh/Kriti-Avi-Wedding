@@ -31,7 +31,7 @@ class header extends React.Component {
       showIosPWABanner: false,
       pwaInstruction: false,
       showPrompt: false,
-      beforeinstallprompt: null
+      beforeinstallprompt: null,
     };
     if (checkIsUserLoggedIn() === "false" || checkIsUserLoggedIn() != "true") {
       browserHistory.push("/");
@@ -54,7 +54,7 @@ class header extends React.Component {
     if (window.matchMedia("(display-mode: standalone)").matches) {
       this.setState({
         showAndroidPWADownload: false,
-        showIosPWABanner: false
+        showIosPWABanner: false,
       });
     }
   }
@@ -86,7 +86,7 @@ class header extends React.Component {
   togglePWAInstruction() {
     console.log("Clicked ...");
     this.setState({
-      pwaInstruction: !this.state.pwaInstruction
+      pwaInstruction: !this.state.pwaInstruction,
     });
   }
 
@@ -126,7 +126,7 @@ class header extends React.Component {
 
   toggleHidden(event) {
     this.setState({
-      isMenuHidden: !this.state.isMenuHidden
+      isMenuHidden: !this.state.isMenuHidden,
     });
     this.iconClass = get(event.target, "attributes['id'].value");
     let isClose = $(event.currentTarget).hasClass("close");
@@ -178,12 +178,12 @@ class header extends React.Component {
       return true;
     }
   }
-  handleDeferredPrompt = e => {
+  handleDeferredPrompt = (e) => {
     const { showPrompt, beforeinstallprompt } = this.state;
     if (showPrompt) {
       // alert("Will show A2HS here");
       beforeinstallprompt.prompt();
-      beforeinstallprompt.userChoice.then(function(choiceResult) {
+      beforeinstallprompt.userChoice.then(function (choiceResult) {
         if (choiceResult.outcome === "accepted") {
           document.querySelector(".a2hsBtn").classList.add("hide");
         } else {
@@ -218,7 +218,7 @@ class header extends React.Component {
     }
 
     // NB - Add to HomeScreen
-    window.addEventListener("beforeinstallprompt", e => {
+    window.addEventListener("beforeinstallprompt", (e) => {
       const showPrompt = true;
       this.setState({ showPrompt, beforeinstallprompt: e });
       console.log(
@@ -292,7 +292,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Chat Option") {
                   return (
                     <div
@@ -326,7 +326,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "About") {
                   return (
                     <li>
@@ -341,7 +341,7 @@ class header extends React.Component {
                               <div className="icon-div">
                                 <span className="icon-bride-and-groom commonIcon icon-white iconp" />
                               </div>
-                              <p className="menuName">Kriti & Avi</p>
+                              <p className="menuName">KRITI & AVI</p>
                             </div>
                           </div>
                         )}
@@ -367,7 +367,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Destination") {
                   return (
                     <li
@@ -378,7 +378,7 @@ class header extends React.Component {
                         <div className="icon-div">
                           <span className="icon-destination commonIcon icon-white iconp" />
                         </div>
-                        <p className="menuName">DESTINATION</p>
+                        <p className="menuName">DUBAI</p>
                       </div>
                     </li>
                   );
@@ -388,7 +388,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "RSVP") {
                   return (
                     <li onClick={this.toggleHidden.bind(this)} data-menu="rsvp">
@@ -406,7 +406,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Itinerary") {
                   return (
                     <li
@@ -435,7 +435,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Speakers") {
                   return (
                     <li
@@ -446,7 +446,7 @@ class header extends React.Component {
                         <div className="icon-div">
                           <span className="fa fa-microphone commonIcon icon-white iconp-fa" />
                         </div>
-                        <p className="menuName">SPEAKERS</p>
+                        <p className="menuName">HOTELS</p>
                       </div>
                     </li>
                   );
@@ -467,7 +467,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Travel Details") {
                   return (
                     <li
@@ -527,7 +527,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "photoShare") {
                   return (
                     <li
@@ -586,7 +586,7 @@ class header extends React.Component {
                         <div className="icon-div">
                           <span className="icon-wishes commonIcon icon-white iconp" />
                         </div>
-                        <p className="menuName">WISHES</p>
+                        <p className="menuName">BLESSINGS</p>
                       </div>
                     </li>
                   )}
@@ -611,7 +611,7 @@ class header extends React.Component {
             {appdet &&
               appdet.appDetails &&
               appdet.appDetails.selectedAppDetails &&
-              appdet.appDetails.selectedAppDetails.map(list => {
+              appdet.appDetails.selectedAppDetails.map((list) => {
                 if (list === "Contact Details") {
                   return (
                     <li
@@ -657,7 +657,7 @@ function mapStateToProps(state) {
     popDetails: getPopupdata(state),
     eventName: getEventName(state),
     appDetails: getAppDetails(state),
-    welcomeData: getWelcomeDetails(state)
+    welcomeData: getWelcomeDetails(state),
   };
 }
 export default connect(mapStateToProps)(header);

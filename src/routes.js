@@ -27,6 +27,7 @@ import Notifications from "./components/notifications/notifications";
 import app from "./components/app";
 import Chat from "./components/chat/chat";
 import App from "./App";
+import CovidInfo from "./components/covidInfo/myInformation";
 
 import { DOWNLOADS, PHOTOS } from "./constants";
 
@@ -43,7 +44,7 @@ import PhotoLanding from "./pages/photoShare/templates/PhotoLanding";
 import Groups from "./pages/photoShare/templates/Groups";
 import Downloads from "./pages/downloads";
 
-import MyPurchases from './pages/myPurchases/myPurchases';
+import MyPurchases from "./pages/myPurchases/myPurchases";
 // import Cart from './pages/myPurchases/cart';
 // import Checkout from './pages/myPurchases/checkout';
 
@@ -67,6 +68,7 @@ export default (
       <Route path="/contactUs" component={ContactUs} />
       <Route path="/wishes" component={Wishes} />
       <Route path="/feedback" component={Wishes} />
+      <Route path="/covid-info" component={CovidInfo} />
       <Route path="/legal" component={Legal} />
       <Route path="/social" component={Social} />
       <Route path="/myPurchases" component={MyPurchases} />
@@ -90,9 +92,15 @@ export default (
       <Route path="/home" component={homePage} />
       <Route path="/speakers" component={speakerPage} />
       <Route path="/sponsors" component={sponsorPage} />
-      <Route path={`/${PHOTOS.BASE_PATH}/${PHOTOS.MY_GROUPS}`} component={Groups} />
+      <Route
+        path={`/${PHOTOS.BASE_PATH}/${PHOTOS.MY_GROUPS}`}
+        component={Groups}
+      />
       <Route path={`/${PHOTOS.BASE_PATH}(/:subPath)`} component={PhotoShare} />
-      <Route path={`/${PHOTOS.LANDING}/:photoId(/:subPath)(/:commentId)`} component={PhotoLanding} />
+      <Route
+        path={`/${PHOTOS.LANDING}/:photoId(/:subPath)(/:commentId)`}
+        component={PhotoLanding}
+      />
       <Route path={`/${DOWNLOADS.BASE_PATH}`} component={Downloads} />
     </Route>
   </div>

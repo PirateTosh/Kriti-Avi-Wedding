@@ -33,7 +33,7 @@ export const ResultContainer = styled.ul`
   &.selected {
     position: relative;
     top: auto;
-    background: transparent;
+
     box-shadow: none;
     color: inherit;
   }
