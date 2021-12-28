@@ -93,6 +93,7 @@ class login extends React.Component {
               <span
                 toggle="#password-field"
                 className="fa fa-fw fa-eye field-icon toggle-password"
+                style={{color: "#8e3703ff"}}
               />
             </div>
             <div className="form-group">
