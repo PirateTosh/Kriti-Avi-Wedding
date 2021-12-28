@@ -70,6 +70,7 @@ class login extends React.Component {
           <form id="loginForm">
             <div className="form-group input-group">
               <input
+              style={{ color: "black" }}
                 autoFocus
                 ref="username"
                 className="textboxTransparent loginText"
@@ -97,7 +98,7 @@ class login extends React.Component {
             <div className="form-group">
               <button
                 className="loginbtn  btn-def btn-block textboxTransparent"
-                style={{ fontSize: "22px" }}
+                style={{ fontSize: "22px" , color: "black"}}
                 onClick={this.handleSubmit.bind(this)}
               >
                 SIGN IN

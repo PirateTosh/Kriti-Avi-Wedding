@@ -44,6 +44,8 @@
   background: transparent !important;
   border: 1px solid var(--font-color) !important;
   text-align: center;
+  border-color: #8e3703ff !important;
+  text-decoration: #8e3703ff !important;
 }
 .textboxTransparent.loginText {
   width: 500px !important;
@@ -64,11 +66,11 @@
   border-image-slice: 1;
 }
 .textboxTransparent {
-  color: var(--font-color) !important;
+  color: #8e3703ff !important;
   border-radius: 10px;
 }
 ::placeholder {
-  color: var(--font-color) !important;
+  color: #8e3703ff !important;
   opacity: 1; /* Firefox */
 }
 
@@ -144,6 +146,7 @@
     font-size: 14px !important;
     align-items: center;
     border-radius: 10px;
+    background: #8e3703ff !important;
   }
 
   .nameHeading {
