@@ -186,7 +186,7 @@ class Menu extends React.Component {
 								<img id="homeLogoMob" src={testimage} alt="" style={{ display:"none",width:"95px", height:"95px", marginTop:"27%", marginBottom:"2%"}}/>
 
 								<h2 id="tag" style={{display: "block", color:"#781800ff", fontSize:"15px", marginTop:"1%",marginBottom:"-19%",fontFamily:"Scope one regular",fontWeight:"bold"}}>#KASealedTheDeal</h2>
-								<h2 id="tagMob" style={{display: "none", color:"#781800ff", fontSize:"15px", marginBottom:"-35%",fontFamily:"Scope one regular",fontWeight:"bold"}}>#KASealedTheDeal</h2>
+								<h2 id="tagMob" style={{display: "none", color:"#781800ff", fontSize:"15px", marginBottom:"-40%",fontFamily:"Scope one regular",fontWeight:"bold"}}>#KASealedTheDeal</h2>
 				<h3 className="coupleName appBodyFontColor appNavbarFontFamily headingTop headingTopSize">
 					{/* {AppTItle} */}
 					&nbsp;
