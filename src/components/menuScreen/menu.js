@@ -19,6 +19,7 @@ import $ from "jquery";
 import { isMobile, AppTItle, AppShortName } from "../../config/config.js";
 import cloneDeep from "lodash/cloneDeep";
 import _ from "lodash";
+ import testimage from "../../../src/image/appLogo.png";
 
 import { PHOTOS, DOWNLOADS } from "../../constants";
 
@@ -71,7 +72,12 @@ class Menu extends React.Component {
 			$(".notificationBell").show();
 			$(".chat").show();
 			$(".appLogo").show();
+			$("#homeLogo").hide();
+			$("#homeLogoMob").show();
+			$("#tag").hide();
+			$("#tagMob").show();
 		}
+		
 		fetchAppDetails();
 		if (!this.props.welcomeData) {
 			fetchWelcomeDetails();
@@ -176,11 +182,16 @@ class Menu extends React.Component {
 
 		return (
 			<div className="categories">
+								<img id="homeLogo" src={testimage} alt="" style={{width:"130px", height:"130px", marginTop:"12%"}}/>
+								<img id="homeLogoMob" src={testimage} alt="" style={{ display:"none",width:"95px", height:"95px", marginTop:"31%", marginBottom:"2%"}}/>
+
+								<h2 id="tag" style={{display: "block", color:"#781800ff", fontSize:"15px", marginTop:"1%",marginBottom:"5%",fontFamily:"Scope one regular",fontWeight:"bold"}}>#KASealedTheDeal</h2>
+								<h2 id="tagMob" style={{display: "none", color:"#781800ff", fontSize:"15px", marginBottom:"-4%",fontFamily:"Scope one regular",fontWeight:"bold"}}>#KASealedTheDeal</h2>
 				<h3 className="coupleName appBodyFontColor appNavbarFontFamily headingTop headingTopSize">
 					{/* {AppTItle} */}
 					&nbsp;
 				</h3>
-				<div className="container categoriesItem">
+				<div id="menuGrid" className="container categoriesItem" style={{marginTop:"-17%"}}>
 					<ul id="iconContainer" className="category-items">
 						<li className="appSelectColor">
 							{appdet &&
@@ -188,7 +199,7 @@ class Menu extends React.Component {
 								appdet.basicDetails.eventType === "wedding" && (
 									<div
 										className="icon-namaste bigIcon  icon-white"
-										style={{ backgroundColor: "#781800ff" }}
+										style={{ backgroundColor: "#d4af37", height:"60px",width:"60px", height:"60px",width:"60px" }}
 										onClick={() => {
 											browserHistory.push("/welcome");
 										}}
@@ -199,7 +210,7 @@ class Menu extends React.Component {
 								appdet.basicDetails.eventType !== "wedding" && (
 									<div
 										className="icon-handshake bigIcon  icon-white"
-										style={{ backgroundColor: "#781800ff" }}
+										style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 										onClick={() => {
 											browserHistory.push("/welcome");
 										}}
@@ -222,7 +233,7 @@ class Menu extends React.Component {
 													<div>
 														<div
 															className="icon-bride-and-groom bigIcon  icon-white"
-															style={{ backgroundColor: "#781800ff" }}
+															style={{ backgroundColor: "#d4af37", height:"60px",width:"60px"} }
 															onClick={() => {
 																browserHistory.push("/about2");
 															}}
@@ -238,7 +249,7 @@ class Menu extends React.Component {
 													<div>
 														<div
 															className="icon-manager bigIcon icon-white"
-															style={{ backgroundColor: "#781800ff" }}
+															style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 															onClick={() => {
 																browserHistory.push("/about2");
 															}}
@@ -256,7 +267,7 @@ class Menu extends React.Component {
 							<li>
 								<div
 									className="icon-destination bigIcon  icon-white"
-									style={{ backgroundColor: "#781800ff" }}
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 									onClick={() => {
 										browserHistory.push("/destination");
 									}}
@@ -285,7 +296,7 @@ class Menu extends React.Component {
 							<li>
 								<div
 									className="icon-rsvp-and-registration bigIcon icon-white"
-									style={{ backgroundColor: "#781800ff" }}
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 									onClick={() => {
 										browserHistory.push("/rsvp");
 									}}
@@ -296,11 +307,39 @@ class Menu extends React.Component {
 							</li>
 						) : null}
 
+						{this.hasFeature("Speakers") ? (
+							<li>
+								<div
+									className="fa fa-hotel bigIcon icon-white"
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
+									onClick={() => {
+										browserHistory.push("/speakers");
+									}}
+								/>
+								<p className="iconName appBodyFontFamily appBodyFontColor">
+									HOTELS
+								</p>
+							</li>
+						) : null}
+						
+
+						<li>
+							<div
+								className="icon-event-details bigIcon  icon-white"
+								style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
+								onClick={() => {
+									browserHistory.push("/eventDetails");
+								}}
+							/>
+							<p className="iconName appBodyFontFamily appBodyFontColor">
+								EVENT DETAILS
+							</p>
+						</li>
 						{this.hasFeature("Itinerary") ? (
 							<li>
 								<div
 									className="icon-itinerary bigIcon  icon-white"
-									style={{ backgroundColor: "#781800ff" }}
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 									onClick={() => {
 										browserHistory.push("/itinerary");
 									}}
@@ -311,38 +350,11 @@ class Menu extends React.Component {
 							</li>
 						) : null}
 
-						<li>
-							<div
-								className="icon-event-details bigIcon  icon-white"
-								style={{ backgroundColor: "#781800ff" }}
-								onClick={() => {
-									browserHistory.push("/eventDetails");
-								}}
-							/>
-							<p className="iconName appBodyFontFamily appBodyFontColor">
-								EVENT DETAILS
-							</p>
-						</li>
-						{this.hasFeature("Speakers") ? (
-							<li>
-								<div
-									className="fa fa-hotel bigIcon icon-white"
-									style={{ backgroundColor: "#781800ff" }}
-									onClick={() => {
-										browserHistory.push("/speakers");
-									}}
-								/>
-								<p className="iconName appBodyFontFamily appBodyFontColor">
-									HOTELS
-								</p>
-							</li>
-						) : null}
-
 						{this.hasFeature("Sponsors") ? (
 							<li>
 								<div
 									className="fa fa-star bigIcon icon-white"
-									style={{ backgroundColor: "#781800ff" }}
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 									onClick={() => {
 										browserHistory.push("/sponsors");
 									}}
@@ -358,7 +370,7 @@ class Menu extends React.Component {
 								<li>
 									<div
 										className="icon-my-info bigIcon icon-white"
-										style={{ backgroundColor: "#781800ff" }}
+										style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 										onClick={() => {
 											browserHistory.push("/myInformation");
 										}}
@@ -373,7 +385,7 @@ class Menu extends React.Component {
 						<li>
 							<div
 								className="fa fa-heartbeat bigIcon icon-white"
-								style={{ backgroundColor: "#781800ff" }}
+								style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 								onClick={() => {
 									browserHistory.push("/covid-info");
 								}}
@@ -407,7 +419,7 @@ class Menu extends React.Component {
 							<li>
 								<div
 									className="icon-my-preferences bigIcon icon-white"
-									style={{ backgroundColor: "#781800ff" }}
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 									onClick={() => {
 										browserHistory.push("/myPreferences");
 									}}
@@ -420,7 +432,7 @@ class Menu extends React.Component {
 						<li>
 							<div
 								className="icon-my-summary bigIcon icon-white"
-								style={{ backgroundColor: "#781800ff" }}
+								style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 								onClick={() => {
 									browserHistory.push("/mySummary");
 								}}
@@ -434,7 +446,7 @@ class Menu extends React.Component {
 							<li>
 								<div
 									className="fa fa-camera bigIcon  icon-white"
-									style={{ backgroundColor: "#781800ff" }}
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 									onClick={() => {
 										browserHistory.push(`/${PHOTOS.BASE_PATH}`);
 									}}
@@ -449,7 +461,7 @@ class Menu extends React.Component {
 							<li>
 								<div
 									className="fa fa-download bigIcon  icon-white"
-									style={{ backgroundColor: "#781800ff" }}
+									style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 									onClick={() => {
 										browserHistory.push(`/${DOWNLOADS.BASE_PATH}`);
 									}}
@@ -468,7 +480,7 @@ class Menu extends React.Component {
 										<li>
 											<div
 												className="icon-wishes bigIcon icon-white"
-												style={{ backgroundColor: "#781800ff" }}
+												style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 												onClick={() => {
 													browserHistory.push("/feedback");
 												}}
@@ -481,7 +493,7 @@ class Menu extends React.Component {
 										<li>
 											<div
 												className="icon-wishes bigIcon icon-white"
-												style={{ backgroundColor: "#781800ff" }}
+												style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 												onClick={() => {
 													browserHistory.push("/wishes");
 												}}
@@ -504,7 +516,7 @@ class Menu extends React.Component {
 								<li>
 									<div
 										className="fa fa-share-square bigIcon icon-white"
-										style={{ backgroundColor: "#781800ff" }}
+										style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 										onClick={() => {
 											browserHistory.push("/social");
 										}}
@@ -523,7 +535,7 @@ class Menu extends React.Component {
 										<li>
 											<div
 												className="icon-contact-us bigIcon icon-white"
-												style={{ backgroundColor: "#781800ff" }}
+												style={{ backgroundColor: "#d4af37", height:"60px",width:"60px" }}
 												onClick={() => {
 													browserHistory.push("/contactUs");
 												}}
