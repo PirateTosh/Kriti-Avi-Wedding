@@ -3,7 +3,8 @@ html {
 }
 body,
 .appBody {
-  background-image: url("../../src/image/bgPlain.jpeg");
+  /* background-image: url("../../src/image/bgPlain.jpeg"); */
+  background-image: url("https://s3-ap-southeast-1.amazonaws.com/tksproduction/bmtimages/orNSySbWYSE5xQSYg.jpeg");
 }
 .appLogo {
   background-image: url("https://s3-ap-southeast-1.amazonaws.com/tksproduction/bmtimages/BL6vsxuLrFm6ux3Ze.png");
